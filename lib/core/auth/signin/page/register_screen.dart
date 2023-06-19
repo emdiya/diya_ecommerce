@@ -69,19 +69,19 @@ class RegisterScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 30),
-                    Text(
-                      'Your Name',
-                      style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                            fontSize: 16,
-                            fontFamily: FontFamily.ralewayRegular,
-                            fontWeight: FontWeight.w500,
-                            color: AppColor.textBlackLight,
-                          ),
-                    ),
-                    const SizedBox(height: 12),
-                    const CustomTextFormField(
-                      hintext: 'Your Name',
-                    ),
+                    // Text(
+                    //   'Your Name',
+                    //   style: Theme.of(context).textTheme.labelMedium?.copyWith(
+                    //         fontSize: 16,
+                    //         fontFamily: FontFamily.ralewayRegular,
+                    //         fontWeight: FontWeight.w500,
+                    //         color: AppColor.textBlackLight,
+                    //       ),
+                    // ),
+                    // const SizedBox(height: 12),
+                    // const CustomTextFormField(
+                    //   hintext: 'Your Name',
+                    // ),
                     const SizedBox(height: 30),
                     Text(
                       'Email Address',
