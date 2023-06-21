@@ -12,8 +12,8 @@ class BottomNavigationBarController extends GetxController {
       label: "Home",
     ),
     ItemModel(
-      imagePath: 'assets/svg/bottom_navigation_bar/favorite.svg',
-      activeImagePath: 'assets/svg/bottom_navigation_bar/favorite-active.svg',
+      activeImagePath: 'assets/svg/bottom_navigation_bar/favorite.svg',
+      imagePath: 'assets/svg/bottom_navigation_bar/favorite-active.svg',
       label: "Favorite",
     ),
     ItemModel(

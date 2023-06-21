@@ -19,12 +19,17 @@ class LogInScreen extends StatelessWidget {
         toolbarHeight: 80,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: const Padding(
-          padding: EdgeInsets.only(left: 20),
-          child: CircularButton(
-            height: 44,
-            width: 44,
-            icon: 'assets/svg/arrow_back.svg',
+        leading: GestureDetector(
+          onTap: () {
+            context.pop();
+          },
+          child: const Padding(
+            padding: EdgeInsets.only(left: 20),
+            child: CircularButton(
+              height: 44,
+              width: 44,
+              icon: 'assets/svg/arrow_back.svg',
+            ),
           ),
         ),
       ),

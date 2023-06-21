@@ -14,6 +14,10 @@ import 'package:flutter/services.dart';
 class $AssetsImgGen {
   const $AssetsImgGen();
 
+  /// File path: assets/img/cam_skyline.png
+  AssetGenImage get camSkyline =>
+      const AssetGenImage('assets/img/cam_skyline.png');
+
   /// File path: assets/img/logo_bg.png
   AssetGenImage get logoBg => const AssetGenImage('assets/img/logo_bg.png');
 
@@ -27,7 +31,8 @@ class $AssetsImgGen {
   AssetGenImage get slider3 => const AssetGenImage('assets/img/slider3.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [logoBg, slider1, slider2, slider3];
+  List<AssetGenImage> get values =>
+      [camSkyline, logoBg, slider1, slider2, slider3];
 }
 
 class $AssetsSvgGen {
@@ -36,8 +41,13 @@ class $AssetsSvgGen {
   /// File path: assets/svg/arrow_back.svg
   SvgGenImage get arrowBack => const SvgGenImage('assets/svg/arrow_back.svg');
 
+  $AssetsSvgBottomNavigationBarGen get bottomNavigationBar =>
+      const $AssetsSvgBottomNavigationBarGen();
+
   /// File path: assets/svg/google_icon.svg
   SvgGenImage get googleIcon => const SvgGenImage('assets/svg/google_icon.svg');
+
+  $AssetsSvgHomeGen get home => const $AssetsSvgHomeGen();
 
   /// File path: assets/svg/nike_logo.svg
   SvgGenImage get nikeLogo => const SvgGenImage('assets/svg/nike_logo.svg');
@@ -47,6 +57,92 @@ class $AssetsSvgGen {
 
   /// List of all assets
   List<SvgGenImage> get values => [arrowBack, googleIcon, nikeLogo, removeEye];
+}
+
+class $AssetsSvgBottomNavigationBarGen {
+  const $AssetsSvgBottomNavigationBarGen();
+
+  /// File path: assets/svg/bottom_navigation_bar/bell-actice.svg
+  SvgGenImage get bellActice =>
+      const SvgGenImage('assets/svg/bottom_navigation_bar/bell-actice.svg');
+
+  /// File path: assets/svg/bottom_navigation_bar/bell.svg
+  SvgGenImage get bell =>
+      const SvgGenImage('assets/svg/bottom_navigation_bar/bell.svg');
+
+  /// File path: assets/svg/bottom_navigation_bar/favorite-active.svg
+  SvgGenImage get favoriteActive =>
+      const SvgGenImage('assets/svg/bottom_navigation_bar/favorite-active.svg');
+
+  /// File path: assets/svg/bottom_navigation_bar/favorite.svg
+  SvgGenImage get favorite =>
+      const SvgGenImage('assets/svg/bottom_navigation_bar/favorite.svg');
+
+  /// File path: assets/svg/bottom_navigation_bar/home-active.svg
+  SvgGenImage get homeActive =>
+      const SvgGenImage('assets/svg/bottom_navigation_bar/home-active.svg');
+
+  /// File path: assets/svg/bottom_navigation_bar/home.svg
+  SvgGenImage get home =>
+      const SvgGenImage('assets/svg/bottom_navigation_bar/home.svg');
+
+  /// File path: assets/svg/bottom_navigation_bar/profile-active.svg
+  SvgGenImage get profileActive =>
+      const SvgGenImage('assets/svg/bottom_navigation_bar/profile-active.svg');
+
+  /// File path: assets/svg/bottom_navigation_bar/profile.svg
+  SvgGenImage get profile =>
+      const SvgGenImage('assets/svg/bottom_navigation_bar/profile.svg');
+
+  /// File path: assets/svg/bottom_navigation_bar/shop.svg
+  SvgGenImage get shop =>
+      const SvgGenImage('assets/svg/bottom_navigation_bar/shop.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [
+        bellActice,
+        bell,
+        favoriteActive,
+        favorite,
+        homeActive,
+        home,
+        profileActive,
+        profile,
+        shop
+      ];
+}
+
+class $AssetsSvgHomeGen {
+  const $AssetsSvgHomeGen();
+
+  /// File path: assets/svg/home/bage.svg
+  SvgGenImage get bage => const SvgGenImage('assets/svg/home/bage.svg');
+
+  /// File path: assets/svg/home/filter.svg
+  SvgGenImage get filter => const SvgGenImage('assets/svg/home/filter.svg');
+
+  /// File path: assets/svg/home/isLove.svg
+  SvgGenImage get isLove => const SvgGenImage('assets/svg/home/isLove.svg');
+
+  /// File path: assets/svg/home/menu.svg
+  SvgGenImage get menu => const SvgGenImage('assets/svg/home/menu.svg');
+
+  /// File path: assets/svg/home/new-arrival.svg
+  SvgGenImage get newArrival =>
+      const SvgGenImage('assets/svg/home/new-arrival.svg');
+
+  /// File path: assets/svg/home/search.svg
+  SvgGenImage get search => const SvgGenImage('assets/svg/home/search.svg');
+
+  /// File path: assets/svg/home/star.svg
+  SvgGenImage get star => const SvgGenImage('assets/svg/home/star.svg');
+
+  /// File path: assets/svg/home/unLove.svg
+  SvgGenImage get unLove => const SvgGenImage('assets/svg/home/unLove.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values =>
+      [bage, filter, isLove, menu, newArrival, search, star, unLove];
 }
 
 class Assets {

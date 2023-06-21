@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../config/go_route/app_routes.dart';
 import '../../../constant/app_colors.dart';
 import '../controller/bottom_navigation_bar.dart';
 import '../widget/custom_item_bar.dart';
@@ -28,15 +30,14 @@ class BottomNavBarScreen extends StatelessWidget {
         visible:
             !context.isTablet && !context.isLargeTablet && !context.isLandscape,
         child: FloatingActionButton(
+          backgroundColor: AppColor.primaryColor,
+          splashColor: Colors.blue.shade900,
           onPressed: () {
             // final location = GoRouter.of(context).location;
             // context.push(location + Routes.CREATE_CASE);
           },
           shape: const CircleBorder(),
-          child: Icon(
-            Icons.add,
-            color: AppColor.secondaryColor,
-          ),
+          child: SvgPicture.asset('assets/svg/bottom_navigation_bar/shop.svg'),
         ),
       ),
       drawerEnableOpenDragGesture: false,
@@ -49,9 +50,11 @@ class BottomNavBarScreen extends StatelessWidget {
           // ****** APP BAR ******************
           clipBehavior: Clip.antiAlias,
           shape: const CircularNotchedRectangle(),
-          notchMargin: 6,
+          notchMargin: 10,
           padding: const EdgeInsets.all(0),
-          shadowColor: AppColor.shadowColor,
+          shadowColor: AppColor.primaryColor,
+          color: Colors.white,
+          surfaceTintColor: Colors.transparent,
           elevation: 10,
           height: 80,
           child: Row(
@@ -62,24 +65,28 @@ class BottomNavBarScreen extends StatelessWidget {
                   .listItem
                   .asMap()
                   .entries
-                  .map((e) => Padding(
-                        padding: EdgeInsets.only(
-                            left: e.key == 2 ? 30 : 0,
-                            right: e.key == 1 ? 30 : 0),
-                        child: ItemBar(
-                          activeAssetPath: e.value.activeImagePath!,
-                          onTap: () {
-                            Get.put(BottomNavigationBarController())
-                                .currentIndex
-                                .value = e.key;
-                            onNavigation(context, e.key);
-                          },
-                          currentIndex: e.key,
-                          onTapIndex: calculateSelectedIndex(context),
-                          assetPath: e.value.imagePath!,
-                          label: e.value.label!,
-                        ),
-                      ))
+                  .map(
+                    (e) => Padding(
+                      padding: EdgeInsets.only(
+                          left: e.key == 2 ? 30 : 0,
+                          right: e.key == 1 ? 30 : 0),
+                      child: ItemBar(
+                        onTap: () {
+                          Get.put(BottomNavigationBarController())
+                              .currentIndex
+                              .value = e.key;
+                          debugPrint(
+                              '-------is Tap ${Get.put(BottomNavigationBarController()).currentIndex.value}');
+                          onNavigation(context, e.key);
+                        },
+                        currentIndex: e.key,
+                        onTapIndex: calculateSelectedIndex(context),
+                        activeAssetPath: e.value.activeImagePath!,
+                        assetPath: e.value.imagePath!,
+                        label: e.value.label!,
+                      ),
+                    ),
+                  )
                   .toList()
             ],
           ),
@@ -94,13 +101,13 @@ class BottomNavBarScreen extends StatelessWidget {
   ) {
     final String location = GoRouterState.of(context).location;
     switch (location.toLowerCase()) {
-      case "/dashboard":
+      case "/home":
         return 0;
-      case "/my-case":
+      case "/favorite":
         return 1;
       case "/notification":
         return 2;
-      case "/account":
+      case "/profile":
         return 3;
       default:
         return 0;
@@ -110,24 +117,23 @@ class BottomNavBarScreen extends StatelessWidget {
   void onNavigation(BuildContext context, int index) {
     switch (index) {
       case 0:
-        // context.go(Routes.DASHBOARD);
+        context.go(Routes.HOME_SCREEN);
         debugPrint('---------go home');
         break;
       case 1:
-        // context.go(Routes.MY_CASE);
         debugPrint('---------go favorite');
+        context.go(Routes.FAVORITE_SCREEN);
         break;
       case 2:
-        // context.go(Routes.NOTIFICATION);
-        debugPrint('---------go bell');
+        context.go(Routes.NOTIFICATION_SCREEN);
         break;
       case 3:
-        // context.go(Routes.ACCOUNT);
         debugPrint('---------go profile');
+        context.go(Routes.PROFILE_SCREEN);
         break;
       default:
-        // context.go(Routes.DASHBOARD);
         debugPrint('---------go home');
+        context.go(Routes.HOME_SCREEN);
         break;
     }
   }

@@ -1,3 +1,4 @@
+import 'package:diya_ecomerce/config/go_route/app_routes.dart';
 import 'package:diya_ecomerce/constant/app_colors.dart';
 import 'package:diya_ecomerce/gen/assets.gen.dart';
 import 'package:diya_ecomerce/gen/fonts.gen.dart';
@@ -6,6 +7,7 @@ import 'package:diya_ecomerce/utils/widget/custom_click_button.dart';
 import 'package:diya_ecomerce/utils/widget/custom_textformfield.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -17,12 +19,17 @@ class RegisterScreen extends StatelessWidget {
         toolbarHeight: 80,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: const Padding(
-          padding: EdgeInsets.only(left: 20),
-          child: CircularButton(
-            height: 44,
-            width: 44,
-            icon: 'assets/svg/arrow_back.svg',
+        leading: GestureDetector(
+          onTap: () {
+            context.pop();
+          },
+          child: const Padding(
+            padding: EdgeInsets.only(left: 20),
+            child: CircularButton(
+              height: 44,
+              width: 44,
+              icon: 'assets/svg/arrow_back.svg',
+            ),
           ),
         ),
       ),
@@ -69,19 +76,19 @@ class RegisterScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 30),
-                    // Text(
-                    //   'Your Name',
-                    //   style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                    //         fontSize: 16,
-                    //         fontFamily: FontFamily.ralewayRegular,
-                    //         fontWeight: FontWeight.w500,
-                    //         color: AppColor.textBlackLight,
-                    //       ),
-                    // ),
-                    // const SizedBox(height: 12),
-                    // const CustomTextFormField(
-                    //   hintext: 'Your Name',
-                    // ),
+                    Text(
+                      'Your Name',
+                      style: Theme.of(context).textTheme.labelMedium?.copyWith(
+                            fontSize: 16,
+                            fontFamily: FontFamily.ralewayRegular,
+                            fontWeight: FontWeight.w500,
+                            color: AppColor.textBlackLight,
+                          ),
+                    ),
+                    const SizedBox(height: 12),
+                    const CustomTextFormField(
+                      hintext: 'Your Name',
+                    ),
                     const SizedBox(height: 30),
                     Text(
                       'Email Address',
@@ -113,24 +120,11 @@ class RegisterScreen extends StatelessWidget {
                       isPassword: true,
                     ),
                     const SizedBox(height: 12),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Text(
-                          'Recovery Password',
-                          overflow: TextOverflow.clip,
-                          style:
-                              Theme.of(context).textTheme.labelMedium?.copyWith(
-                                    fontFamily: FontFamily.ralewayRegular,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400,
-                                    color: AppColor.textGrey1,
-                                  ),
-                        ),
-                      ],
-                    ),
                     const SizedBox(height: 24),
-                    const CustomClickButton(
+                    CustomClickButton(
+                      onTap: () {
+                        context.go(Routes.HOME_SCREEN);
+                      },
                       title: 'Sign In',
                     ),
                     const SizedBox(height: 24),

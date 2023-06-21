@@ -6,12 +6,18 @@ abstract class Routes {
   static const REGISTER_SCREEN = Paths.REGISTER_SCREEN;
   static const SCREESPLASH_SCREEN = Paths.SPLASH_SCREEN;
   static const HOME_SCREEN = Paths.HOME_SCREEN;
+  static const FAVORITE_SCREEN = Paths.FAVORITE_SCREEN;
+  static const NOTIFICATION_SCREEN = Paths.NOTIFICATION_SCREEN;
+  static const PROFILE_SCREEN = Paths.PROFILE_SCREEN;
 }
 
 abstract class Paths {
   Paths._();
-  static const SPLASH_SCREEN = '/splash_screen';
-  static const LOGIN_SCREEN = '/login_screen';
-  static const REGISTER_SCREEN = '/register_screen';
-  static const HOME_SCREEN = '/home_screen';
+  static const SPLASH_SCREEN = '/splash-screen';
+  static const LOGIN_SCREEN = '/login';
+  static const REGISTER_SCREEN = '/register';
+  static const HOME_SCREEN = '/home';
+  static const FAVORITE_SCREEN = '/favorite';
+  static const NOTIFICATION_SCREEN = '/notification';
+  static const PROFILE_SCREEN = '/profile';
 }

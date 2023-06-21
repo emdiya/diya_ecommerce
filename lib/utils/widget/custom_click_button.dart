@@ -12,6 +12,7 @@ class CustomClickButton extends StatelessWidget {
   final Color? color;
   final String? imgUrl;
   final Color? colortxt;
+  final Function()? onTap;
   const CustomClickButton({
     Key? key,
     this.title,
@@ -19,37 +20,41 @@ class CustomClickButton extends StatelessWidget {
     this.color,
     this.imgUrl,
     this.colortxt,
+    this.onTap,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: height,
-      width: Get.width,
-      decoration: BoxDecoration(
-        color: color ?? const Color(0xff0D6EFD),
-        borderRadius: BorderRadius.circular(14),
-      ),
-      child: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            if (imgUrl != '' && imgUrl != null)
-              SvgPicture.asset(
-                imgUrl ?? '',
-                height: 22,
-                width: 22,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        height: height,
+        width: Get.width,
+        decoration: BoxDecoration(
+          color: color ?? const Color(0xff0D6EFD),
+          borderRadius: BorderRadius.circular(14),
+        ),
+        child: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              if (imgUrl != '' && imgUrl != null)
+                SvgPicture.asset(
+                  imgUrl ?? '',
+                  height: 22,
+                  width: 22,
+                ),
+              const SizedBox(width: 10),
+              Text(
+                '$title',
+                style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                      fontFamily: FontFamily.ralewayRegular,
+                      fontWeight: FontWeight.w600,
+                      color: colortxt ?? AppColor.textWhite,
+                    ),
               ),
-            const SizedBox(width: 10),
-            Text(
-              '$title',
-              style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                    fontFamily: FontFamily.ralewayRegular,
-                    fontWeight: FontWeight.w600,
-                    color: colortxt ?? AppColor.textWhite,
-                  ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

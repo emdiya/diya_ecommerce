@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 extension AppColor on Color {
   //==app color===================
-  static var primaryColor = const Color(0xff0B4E80);
+  static var primaryColor = const Color(0xff0D6EFD);
   static var secondaryColor = const Color(0xffFFFFFF);
   static var thirdColor = const Color(0xFF1F8FE5);
   static var buttonColor = const Color(0xff12B8E2);

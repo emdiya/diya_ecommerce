@@ -31,28 +31,29 @@ class ItemBar extends StatelessWidget {
         color: Colors.transparent,
         padding: const EdgeInsets.symmetric(vertical: 0),
         child: Column(
-          // mainAxisSize: MainAxisSize.min,
+          mainAxisSize: MainAxisSize.min,
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 10),
               child: SizedBox(
-                  // color: Colors.yellow,
-                  height: 32,
-                  child: SvgPicture.asset(
-                    onTapIndex == currentIndex ? activeAssetPath : assetPath,
-                    color: onTapIndex == currentIndex && context.isDarkMode
-                        ? Theme.of(context).colorScheme.primary
-                        : null,
-                  )),
+                height: 32,
+                child: SvgPicture.asset(
+                  onTapIndex == currentIndex ? activeAssetPath : assetPath,
+                  // color: onTapIndex == currentIndex
+                  //     ? AppColor.primaryColor
+                  //     : AppColor.textGrey1,
+                ),
+              ),
             ),
             Text(
               label,
               style: TextStyle(
-                  fontWeight: onTapIndex == currentIndex
-                      ? FontWeight.w600
-                      : FontWeight.w500,
-                  fontFamily: FontFamily.poppinsRegular,
-                  fontSize: 10),
+                fontWeight: onTapIndex == currentIndex
+                    ? FontWeight.w600
+                    : FontWeight.w500,
+                fontFamily: FontFamily.poppinsRegular,
+                fontSize: 10,
+              ),
             )
           ],
         ),
