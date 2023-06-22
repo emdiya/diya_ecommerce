@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
-
 import '../../../config/go_route/app_routes.dart';
 import '../../../constant/app_colors.dart';
 import '../controller/bottom_navigation_bar.dart';
@@ -40,8 +39,8 @@ class BottomNavBarScreen extends StatelessWidget {
           child: SvgPicture.asset('assets/svg/bottom_navigation_bar/shop.svg'),
         ),
       ),
-      drawerEnableOpenDragGesture: false,
-      // drawer: const MyDrawer(),
+      // drawerEnableOpenDragGesture: false,
+      // drawer: const SettingScreen(),
       body: child,
       bottomNavigationBar: Visibility(
         visible:

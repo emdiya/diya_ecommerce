@@ -21,6 +21,9 @@ class $AssetsImgGen {
   /// File path: assets/img/logo_bg.png
   AssetGenImage get logoBg => const AssetGenImage('assets/img/logo_bg.png');
 
+  /// File path: assets/img/profile.jpg
+  AssetGenImage get profile => const AssetGenImage('assets/img/profile.jpg');
+
   /// File path: assets/img/slider1.png
   AssetGenImage get slider1 => const AssetGenImage('assets/img/slider1.png');
 
@@ -32,7 +35,7 @@ class $AssetsImgGen {
 
   /// List of all assets
   List<AssetGenImage> get values =>
-      [camSkyline, logoBg, slider1, slider2, slider3];
+      [camSkyline, logoBg, profile, slider1, slider2, slider3];
 }
 
 class $AssetsSvgGen {
@@ -44,19 +47,45 @@ class $AssetsSvgGen {
   $AssetsSvgBottomNavigationBarGen get bottomNavigationBar =>
       const $AssetsSvgBottomNavigationBarGen();
 
+  /// File path: assets/svg/car.svg
+  SvgGenImage get car => const SvgGenImage('assets/svg/car.svg');
+
+  /// File path: assets/svg/favorite.svg
+  SvgGenImage get favorite => const SvgGenImage('assets/svg/favorite.svg');
+
   /// File path: assets/svg/google_icon.svg
   SvgGenImage get googleIcon => const SvgGenImage('assets/svg/google_icon.svg');
 
   $AssetsSvgHomeGen get home => const $AssetsSvgHomeGen();
 
+  /// File path: assets/svg/logout.svg
+  SvgGenImage get logout => const SvgGenImage('assets/svg/logout.svg');
+
   /// File path: assets/svg/nike_logo.svg
   SvgGenImage get nikeLogo => const SvgGenImage('assets/svg/nike_logo.svg');
+
+  /// File path: assets/svg/notification.svg
+  SvgGenImage get notification =>
+      const SvgGenImage('assets/svg/notification.svg');
 
   /// File path: assets/svg/remove_eye.svg
   SvgGenImage get removeEye => const SvgGenImage('assets/svg/remove_eye.svg');
 
+  /// File path: assets/svg/setting.svg
+  SvgGenImage get setting => const SvgGenImage('assets/svg/setting.svg');
+
   /// List of all assets
-  List<SvgGenImage> get values => [arrowBack, googleIcon, nikeLogo, removeEye];
+  List<SvgGenImage> get values => [
+        arrowBack,
+        car,
+        favorite,
+        googleIcon,
+        logout,
+        nikeLogo,
+        notification,
+        removeEye,
+        setting
+      ];
 }
 
 class $AssetsSvgBottomNavigationBarGen {

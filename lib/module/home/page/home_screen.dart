@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../utils/widget/custom_button_bagcart.dart';
+import '../widget/custom_item_menu.dart';
 import '../widget/custom_newarrival_block.dart';
 import '../widget/custom_search_block.dart';
 
@@ -26,16 +27,32 @@ class HomeScreen extends StatelessWidget {
                 fontFamily: FontFamily.ralewayBold,
               ),
         ),
-        automaticallyImplyLeading: false,
-        leading: Padding(
-          padding: const EdgeInsets.only(
-            left: 20,
-          ),
-          child: SvgPicture.asset(
-            'assets/svg/home/menu.svg',
-            height: 18,
-            width: 25.17,
-          ),
+        automaticallyImplyLeading: true,
+        leading: Builder(
+          builder: (BuildContext context) {
+            return GestureDetector(
+              onTap: () {
+                Scaffold.of(context).openDrawer();
+              },
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: SvgPicture.asset(
+                  'assets/svg/home/menu.svg',
+                  height: 18,
+                  width: 25.17,
+                ),
+              ),
+            );
+            // IconButton(
+            //   icon: const Icon(
+            //     Icons.remove_red_eye_sharp,
+            //   ),
+            //   onPressed: () {
+            //     Scaffold.of(context).openDrawer();
+            //   },
+            //   tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+            // );
+          },
         ),
         actions: const [
           Padding(
@@ -43,6 +60,13 @@ class HomeScreen extends StatelessWidget {
             child: CustomButtonAddToCart(),
           ),
         ],
+      ),
+      drawer: SizedBox(
+        width: MediaQuery.of(context).size.width * 1,
+        child: const Drawer(
+          backgroundColor: Color(0xff1483C2),
+          child: CustomItemMenu(),
+        ),
       ),
       body: const SingleChildScrollView(
         scrollDirection: Axis.vertical,
