@@ -5,7 +5,9 @@ import 'package:get/get.dart';
 class HomeController extends GetxController {
   final searchtxt = TextEditingController().obs;
   final index = 0.obs;
+  final category = 'All Shoes'.obs;
   final isSelect = false.obs;
+  final indexSwap = 0.obs;
 }
 
 const cateList = [
@@ -30,7 +32,7 @@ final allProductList = [
     lable: 'Nike Jordan1',
     price: 123,
     recommend: 'Best Seller',
-    category: 'men',
+    category: 'women',
   ),
   AllProductModel(
     id: 196,

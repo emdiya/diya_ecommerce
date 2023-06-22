@@ -44,18 +44,21 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: const Padding(
-        padding: EdgeInsets.only(left: 20, right: 20, top: 20),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CustomSearchBlock(),
-            SizedBox(height: 24),
-            CustomSelectCategory(),
-            SizedBox(height: 24),
-            CustomNewArrivalBlock(),
-          ],
+      body: const SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Padding(
+          padding: EdgeInsets.only(left: 20, right: 20, top: 20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CustomSearchBlock(),
+              SizedBox(height: 24),
+              CustomSelectCategory(),
+              SizedBox(height: 24),
+              CustomNewArrivalBlock(),
+            ],
+          ),
         ),
       ),
     );

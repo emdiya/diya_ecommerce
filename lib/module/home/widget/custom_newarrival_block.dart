@@ -34,7 +34,19 @@ class CustomNewArrivalBlock extends StatelessWidget {
         ),
         const SizedBox(height: 20),
         //! Bannner Slider
-        const CustomBannerSlider(),
+        // CarouselSlider(
+        //   disableGesture: false,
+        //   options: CarouselOptions(
+        //     height: 100,
+        //     aspectRatio: 0.9,
+        //     autoPlay: true,
+        //     viewportFraction: 1,
+        //   ),
+        //   items: [1, 2, 3, 4, 5].map((i) {
+        //     return const CustomBannerSlider();
+        //   }).toList(),
+        // ),
+        const CustomBannerSlider()
       ],
     );
   }

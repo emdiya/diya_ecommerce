@@ -9,9 +9,11 @@ import 'package:get/get.dart';
 import '../../../constant/app_colors.dart';
 import 'custom_listcard_product.dart';
 
-class CustomListProductBlock extends StatelessWidget {
-  const CustomListProductBlock({
+class CustomCardSwitchCategoory extends StatelessWidget {
+  final String category;
+  const CustomCardSwitchCategoory({
     super.key,
+    required this.category,
   });
 
   @override
@@ -48,25 +50,33 @@ class CustomListProductBlock extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    ...allProductList.asMap().entries.map((e) {
-                      return CustomListCardProduct(
-                        allProductModel: e.value,
-                        isFav: e.value.isFav,
-                        onTap: () {
-                          bool isContain =
-                              favoriteController.favoriteList.contains(e.value);
-                          if (!isContain) {
-                            favoriteController.favoriteList
-                                .add(e.value.copyWith(isFav: true));
-                          } else {
-                            favoriteController.favoriteList.remove(e.value);
-                          }
-                          allProductList[e.key] = allProductList[e.key]
-                              .copyWith(isFav: !allProductList[e.key].isFav);
-                          controller.update();
-                        },
-                      );
-                    }),
+                    ...allProductList.asMap().entries.map(
+                      (e) {
+                        if (category == 'All Shoes' ||
+                            e.value.category?.toLowerCase() ==
+                                category.toLowerCase()) {
+                          return CustomListCardProduct(
+                            allProductModel: e.value,
+                            isFav: e.value.isFav,
+                            onTap: () {
+                              bool isContain = favoriteController.favoriteList
+                                  .contains(e.value);
+                              if (!isContain) {
+                                favoriteController.favoriteList
+                                    .add(e.value.copyWith(isFav: true));
+                              } else {
+                                favoriteController.favoriteList.remove(e.value);
+                              }
+                              allProductList[e.key] = allProductList[e.key]
+                                  .copyWith(
+                                      isFav: !allProductList[e.key].isFav);
+                              controller.update();
+                            },
+                          );
+                        }
+                        return const SizedBox.shrink();
+                      },
+                    ),
                   ],
                 ),
               ),

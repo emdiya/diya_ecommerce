@@ -1,6 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:diya_ecomerce/gen/assets.gen.dart';
-import 'package:diya_ecomerce/module/home/controller/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -23,7 +22,6 @@ class CustomListCardProduct extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var home = HomeController();
     return Row(
       children: [
         SizedBox(
