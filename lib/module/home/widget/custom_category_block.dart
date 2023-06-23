@@ -1,6 +1,7 @@
 import 'package:diya_ecomerce/constant/app_colors.dart';
 import 'package:diya_ecomerce/gen/fonts.gen.dart';
 import 'package:diya_ecomerce/module/home/controller/home_controller.dart';
+import 'package:diya_ecomerce/utils/controller/gloabal_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -20,6 +21,7 @@ class _CustomSelectCategoryState extends State<CustomSelectCategory> {
   PageController controller = PageController();
 
   final homeController = Get.put(HomeController());
+  final globleController = Get.put(App());
   @override
   Widget build(BuildContext context) {
     return Obx(
@@ -31,11 +33,13 @@ class _CustomSelectCategoryState extends State<CustomSelectCategory> {
             S.current.selectCategory,
             style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   fontWeight: FontWeight.w600,
-                  fontFamily: FontFamily.ralewaySemiBold,
+                  fontFamily: globleController.localLang.value == 'en'
+                      ? FontFamily.ralewaySemiBold
+                      : FontFamily.kantumruyPro,
                 ),
           ),
           const SizedBox(height: 24),
-          //! List View
+          //! List View Title Category
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -45,7 +49,7 @@ class _CustomSelectCategoryState extends State<CustomSelectCategory> {
                     return GestureDetector(
                       onTap: () {
                         homeController.index.value = e.key;
-                        homeController.category.value = e.value;
+                        homeController.category.value = e.value.en;
                       },
                       child: AnimatedContainer(
                         padding: const EdgeInsets.symmetric(
@@ -63,7 +67,9 @@ class _CustomSelectCategoryState extends State<CustomSelectCategory> {
                         ),
                         // alignment: Alignment.center,
                         child: Text(
-                          e.value,
+                          Get.put(App()).localLang.value == 'en'
+                              ? e.value.en
+                              : e.value.kh,
                           style:
                               Theme.of(context).textTheme.labelMedium?.copyWith(
                                     fontWeight: FontWeight.w400,

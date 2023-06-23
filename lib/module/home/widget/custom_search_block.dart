@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 import '../../../constant/app_colors.dart';
+import '../../../generated/l10n.dart';
 
 class CustomSearchBlock extends StatelessWidget {
   const CustomSearchBlock({
@@ -68,7 +69,7 @@ class CustomSearchBlock extends StatelessWidget {
                 ),
                 isDense: true,
                 fillColor: AppColor.textWhite,
-                hintText: '  Looking for shoes',
+                hintText: '  ${S.current.lookingForShoe}',
                 hintStyle: Theme.of(context).textTheme.labelLarge?.copyWith(
                       fontWeight: FontWeight.w500,
                     ),

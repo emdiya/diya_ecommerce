@@ -8,6 +8,8 @@ import '../model/on_boarding_model/on_boarding_model.dart';
 
 class OnboardingController extends GetxController {
   final index = 0.obs;
+  var tabIndex = 0.obs;
+
   final list = <OnBoardingModel>[
     OnBoardingModel(
       title: "",

@@ -93,17 +93,119 @@ abstract class AppLocalizations {
     Locale('kk')
   ];
 
+  /// No description provided for @home.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get home;
+
+  /// No description provided for @favorite.
+  ///
+  /// In en, this message translates to:
+  /// **'Favorite'**
+  String get favorite;
+
+  /// No description provided for @notification.
+  ///
+  /// In en, this message translates to:
+  /// **'Notification'**
+  String get notification;
+
+  /// No description provided for @profile.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get profile;
+
+  /// No description provided for @all.
+  ///
+  /// In en, this message translates to:
+  /// **'All Shoes'**
+  String get all;
+
+  /// No description provided for @men.
+  ///
+  /// In en, this message translates to:
+  /// **'Men'**
+  String get men;
+
+  /// No description provided for @women.
+  ///
+  /// In en, this message translates to:
+  /// **'Women'**
+  String get women;
+
+  /// No description provided for @kid.
+  ///
+  /// In en, this message translates to:
+  /// **'Kid'**
+  String get kid;
+
+  /// No description provided for @other.
+  ///
+  /// In en, this message translates to:
+  /// **'Ohter'**
+  String get other;
+
   /// No description provided for @selectCategory.
   ///
   /// In en, this message translates to:
   /// **'Select Category'**
   String get selectCategory;
 
-  /// No description provided for @newarriveal.
+  /// No description provided for @newarrival.
   ///
   /// In en, this message translates to:
   /// **'New Arrival'**
-  String get newarriveal;
+  String get newarrival;
+
+  /// No description provided for @lookingForShoe.
+  ///
+  /// In en, this message translates to:
+  /// **'looking for Shoe'**
+  String get lookingForShoe;
+
+  /// No description provided for @seeall.
+  ///
+  /// In en, this message translates to:
+  /// **'See All'**
+  String get seeall;
+
+  /// No description provided for @popular.
+  ///
+  /// In en, this message translates to:
+  /// **'Popular Shoes'**
+  String get popular;
+
+  /// No description provided for @welcometodmstore.
+  ///
+  /// In en, this message translates to:
+  /// **'WELCOME TO DM STORE'**
+  String get welcometodmstore;
+
+  /// No description provided for @skip.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip'**
+  String get skip;
+
+  /// No description provided for @next.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get next;
+
+  /// No description provided for @getstart.
+  ///
+  /// In en, this message translates to:
+  /// **'Get Start'**
+  String get getstart;
+
+  /// No description provided for @nodata.
+  ///
+  /// In en, this message translates to:
+  /// **'No Data'**
+  String get nodata;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

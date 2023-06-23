@@ -1,3 +1,4 @@
+import 'package:diya_ecomerce/utils/controller/gloabal_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
@@ -15,11 +16,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final globalControll = Get.put(App());
     return GestureDetector(
       onTap: () => unFocus(context),
       child: GetMaterialApp.router(
         onInit: () {
-          Get.updateLocale(const Locale('kk'));
+          Get.updateLocale(Locale(globalControll.localLang.value));
         },
         debugShowCheckedModeBanner: false,
         title: 'Diya E-Comerce',

@@ -1,4 +1,5 @@
 import 'package:diya_ecomerce/module/home/model/product_model/product_model.dart';
+import 'package:diya_ecomerce/utils/model/language_model/language_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -10,13 +11,14 @@ class HomeController extends GetxController {
   final indexSwap = 0.obs;
 }
 
-const cateList = [
-  'All Shoes',
-  'MEN',
-  'WOMEN',
-  'KID',
-  'Other',
+var cateList = [
+  LanguageModel(en: 'All Shoes', kh: 'ទាំងអស់'),
+  LanguageModel(en: 'Men', kh: 'បុរស'),
+  LanguageModel(en: 'Women', kh: 'ស្រ្តី'),
+  LanguageModel(en: 'Kid', kh: 'ក្មេង'),
+  LanguageModel(en: 'Other', kh: 'ផ្សេងៗ'),
 ];
+
 final allProductList = [
   AllProductModel(
     id: 101,

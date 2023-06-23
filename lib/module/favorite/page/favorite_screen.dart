@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../generated/l10n.dart';
 import '../../home/controller/home_controller.dart';
 import '../controller/favorite_controller.dart';
 import '../widget/custom_favoritecard.dart';
@@ -22,7 +23,7 @@ class FavoriteScreen extends StatelessWidget {
           context.go(Routes.HOME_SCREEN);
         },
         context: context,
-        title: 'Favorite',
+        title: S.current.favorite,
         centerTitle: true,
         bacbackgroundColor: AppColor.textWhite,
       ),

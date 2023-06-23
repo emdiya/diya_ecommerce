@@ -22,8 +22,27 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "newarriveal": MessageLookupByLibrary.simpleMessage("New Arrival"),
+        "all": MessageLookupByLibrary.simpleMessage("All Shoes"),
+        "favorite": MessageLookupByLibrary.simpleMessage("Favorite"),
+        "getstart": MessageLookupByLibrary.simpleMessage("Get Start"),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "kid": MessageLookupByLibrary.simpleMessage("Kid"),
+        "lookingForShoe":
+            MessageLookupByLibrary.simpleMessage("looking for Shoe"),
+        "men": MessageLookupByLibrary.simpleMessage("Men"),
+        "newarrival": MessageLookupByLibrary.simpleMessage("New Arrival"),
+        "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "nodata": MessageLookupByLibrary.simpleMessage("No Data"),
+        "notification": MessageLookupByLibrary.simpleMessage("Notification"),
+        "other": MessageLookupByLibrary.simpleMessage("Ohter"),
+        "popular": MessageLookupByLibrary.simpleMessage("Popular Shoes"),
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "seeall": MessageLookupByLibrary.simpleMessage("See All"),
         "selectCategory":
-            MessageLookupByLibrary.simpleMessage("Select Category")
+            MessageLookupByLibrary.simpleMessage("Select Category"),
+        "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+        "welcometodmstore":
+            MessageLookupByLibrary.simpleMessage("WELCOME TO DM STORE"),
+        "women": MessageLookupByLibrary.simpleMessage("Women")
       };
 }

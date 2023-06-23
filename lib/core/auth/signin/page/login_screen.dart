@@ -1,5 +1,6 @@
 import 'package:diya_ecomerce/config/go_route/app_routes.dart';
 import 'package:diya_ecomerce/constant/app_colors.dart';
+import 'package:diya_ecomerce/core/auth/signin/controller/auth_controller.dart';
 import 'package:diya_ecomerce/gen/assets.gen.dart';
 import 'package:diya_ecomerce/gen/fonts.gen.dart';
 import 'package:diya_ecomerce/utils/widget/custom_button_circle.dart';
@@ -7,6 +8,7 @@ import 'package:diya_ecomerce/utils/widget/custom_click_button.dart';
 import 'package:diya_ecomerce/utils/widget/custom_textformfield.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 
 class LogInScreen extends StatelessWidget {
@@ -14,6 +16,7 @@ class LogInScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final authControler = Get.put(AuthController());
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 80,
@@ -86,8 +89,16 @@ class LogInScreen extends StatelessWidget {
                           ),
                     ),
                     const SizedBox(height: 12),
-                    const CustomTextFormField(
+                    CustomTextFormField(
+                      controller: authControler.emailtxt.value,
                       hintext: 'Email',
+                      isPassword: false,
+                      onChangeds: (value) {
+                        value = authControler.emailtxt.value.text;
+
+                        debugPrint(
+                            '---------------Data: ${authControler.emailtxt.value.text}');
+                      },
                     ),
                     const SizedBox(height: 30),
                     Text(
@@ -100,10 +111,14 @@ class LogInScreen extends StatelessWidget {
                           ),
                     ),
                     const SizedBox(height: 12),
-                    const CustomTextFormField(
+                    CustomTextFormField(
                       obscureText: true,
                       hintext: 'Password',
+                      controller: authControler.passwordtxt.value,
                       isPassword: true,
+                      onChangeds: (value) {
+                        value = authControler.passwordtxt.value.text;
+                      },
                     ),
                     const SizedBox(height: 12),
                     Row(
@@ -123,7 +138,15 @@ class LogInScreen extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 24),
-                    const CustomClickButton(
+                    CustomClickButton(
+                      onTap: () {
+                        if (authControler.emailtxt.value.text ==
+                                authControler.email.value &&
+                            authControler.passwordtxt.value.text ==
+                                authControler.password.value) {
+                          context.go(Routes.HOME_SCREEN);
+                        } else {}
+                      },
                       title: 'Sign In',
                     ),
                     const SizedBox(height: 24),

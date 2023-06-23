@@ -6,7 +6,6 @@ import 'package:diya_ecomerce/module/home/page/home_screen.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../module/notification/page/notification_screen.dart';
-import '../../../module/profile/page/profile_screen.dart';
 
 final shellRoute = ShellRoute(
   navigatorKey: shellNavigatorKey,
@@ -17,22 +16,29 @@ final shellRoute = ShellRoute(
     GoRoute(
       parentNavigatorKey: shellNavigatorKey,
       path: Routes.HOME_SCREEN,
-      builder: (context, state) => const HomeScreen(),
+      pageBuilder: (context, state) {
+        return const NoTransitionPage(child: HomeScreen());
+      },
     ),
     GoRoute(
       parentNavigatorKey: shellNavigatorKey,
       path: Routes.FAVORITE_SCREEN,
-      builder: (context, state) => const FavoriteScreen(),
+      pageBuilder: (context, state) {
+        return const NoTransitionPage(child: FavoriteScreen());
+      },
     ),
     GoRoute(
       parentNavigatorKey: shellNavigatorKey,
       path: Routes.NOTIFICATION_SCREEN,
-      builder: (context, state) => const NotificationScreen(),
+      pageBuilder: (context, state) {
+        return const NoTransitionPage(child: NotificationScreen());
+      },
     ),
     GoRoute(
-      parentNavigatorKey: shellNavigatorKey,
-      path: Routes.PROFILE_SCREEN,
-      builder: (context, state) => const ProfileScreen(),
-    ),
+        parentNavigatorKey: shellNavigatorKey,
+        path: Routes.PROFILE_SCREEN,
+        pageBuilder: (context, state) {
+          return const NoTransitionPage(child: HomeScreen());
+        }),
   ],
 );

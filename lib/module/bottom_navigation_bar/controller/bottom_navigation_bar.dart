@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 
+import '../../../generated/l10n.dart';
 import '../model/item_model/item_model.dart';
 
 class BottomNavigationBarController extends GetxController {
@@ -9,22 +10,22 @@ class BottomNavigationBarController extends GetxController {
     ItemModel(
       imagePath: 'assets/svg/bottom_navigation_bar/home.svg',
       activeImagePath: 'assets/svg/bottom_navigation_bar/home-active.svg',
-      label: "Home",
+      label: S.current.home,
     ),
     ItemModel(
       activeImagePath: 'assets/svg/bottom_navigation_bar/favorite.svg',
       imagePath: 'assets/svg/bottom_navigation_bar/favorite-active.svg',
-      label: "Favorite",
+      label: S.current.favorite,
     ),
     ItemModel(
       imagePath: 'assets/svg/bottom_navigation_bar/bell.svg',
       activeImagePath: 'assets/svg/bottom_navigation_bar/bell-actice.svg',
-      label: "Notification",
+      label: S.current.notification,
     ),
     ItemModel(
       imagePath: 'assets/svg/bottom_navigation_bar/profile.svg',
       activeImagePath: 'assets/svg/bottom_navigation_bar/profile-active.svg',
-      label: "Profile",
+      label: S.current.profile,
     ),
   ];
   // final listDrawer = <ItemModel>[

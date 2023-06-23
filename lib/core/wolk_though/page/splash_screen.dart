@@ -3,7 +3,6 @@ import 'package:diya_ecomerce/gen/assets.gen.dart';
 import 'package:diya_ecomerce/utils/widget/custom_transition_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_svg/svg.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -29,12 +28,16 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff0D6EFD),
+      backgroundColor: Colors.blue.shade800,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(
-            child: SvgPicture.asset(Assets.svg.nikeLogo.path)
+            child: Image.asset(
+              Assets.img.dmLogo.path,
+              height: 250,
+              width: 250,
+            )
                 .animate()
                 .fadeIn(
                   // begin: 1,

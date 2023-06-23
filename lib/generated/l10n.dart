@@ -50,6 +50,96 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Home`
+  String get home {
+    return Intl.message(
+      'Home',
+      name: 'home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Favorite`
+  String get favorite {
+    return Intl.message(
+      'Favorite',
+      name: 'favorite',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Notification`
+  String get notification {
+    return Intl.message(
+      'Notification',
+      name: 'notification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile`
+  String get profile {
+    return Intl.message(
+      'Profile',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All Shoes`
+  String get all {
+    return Intl.message(
+      'All Shoes',
+      name: 'all',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Men`
+  String get men {
+    return Intl.message(
+      'Men',
+      name: 'men',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Women`
+  String get women {
+    return Intl.message(
+      'Women',
+      name: 'women',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Kid`
+  String get kid {
+    return Intl.message(
+      'Kid',
+      name: 'kid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ohter`
+  String get other {
+    return Intl.message(
+      'Ohter',
+      name: 'other',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Select Category`
   String get selectCategory {
     return Intl.message(
@@ -61,10 +151,90 @@ class S {
   }
 
   /// `New Arrival`
-  String get newarriveal {
+  String get newarrival {
     return Intl.message(
       'New Arrival',
-      name: 'newarriveal',
+      name: 'newarrival',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `looking for Shoe`
+  String get lookingForShoe {
+    return Intl.message(
+      'looking for Shoe',
+      name: 'lookingForShoe',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `See All`
+  String get seeall {
+    return Intl.message(
+      'See All',
+      name: 'seeall',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Popular Shoes`
+  String get popular {
+    return Intl.message(
+      'Popular Shoes',
+      name: 'popular',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `WELCOME TO DM STORE`
+  String get welcometodmstore {
+    return Intl.message(
+      'WELCOME TO DM STORE',
+      name: 'welcometodmstore',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skip`
+  String get skip {
+    return Intl.message(
+      'Skip',
+      name: 'skip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get Start`
+  String get getstart {
+    return Intl.message(
+      'Get Start',
+      name: 'getstart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Data`
+  String get nodata {
+    return Intl.message(
+      'No Data',
+      name: 'nodata',
       desc: '',
       args: [],
     );

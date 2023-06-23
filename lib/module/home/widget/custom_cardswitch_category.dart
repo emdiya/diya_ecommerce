@@ -7,6 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../constant/app_colors.dart';
+import '../../../generated/l10n.dart';
+import '../../../utils/controller/gloabal_controller.dart';
+import '../../../utils/widget/custom_empty_state.dart';
 import 'custom_listcard_product.dart';
 
 class CustomCardSwitchCategoory extends StatelessWidget {
@@ -18,26 +21,33 @@ class CustomCardSwitchCategoory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final newList = allProductList
+        .where((e) => e.category?.toLowerCase() == category.toLowerCase())
+        .toList();
+
     final favoriteController = Get.put(FavoriteController());
     return GetBuilder<HomeController>(
         init: Get.find<HomeController>(),
         builder: (controller) {
           return Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Popular Shoes',
+                    S.current.popular,
                     style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                          fontFamily: FontFamily.ralewayRegular,
+                          fontFamily: Get.put(App().localLang.value == "en")
+                              ? FontFamily.ralewayRegular
+                              : FontFamily.kantumruyPro,
                           fontSize: 16,
                         ),
                   ),
                   Text(
-                    'See All',
+                    S.current.seeall,
                     style: Theme.of(context).textTheme.labelMedium?.copyWith(
                           fontSize: 12,
                           color: AppColor.primaryColor,
@@ -50,11 +60,10 @@ class CustomCardSwitchCategoory extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    ...allProductList.asMap().entries.map(
+                    ...newList.asMap().entries.map(
                       (e) {
-                        if (category == 'All Shoes' ||
-                            e.value.category?.toLowerCase() ==
-                                category.toLowerCase()) {
+                        {
+                          debugPrint("e.value: $e");
                           return CustomListCardProduct(
                             allProductModel: e.value,
                             isFav: e.value.isFav,
@@ -74,9 +83,11 @@ class CustomCardSwitchCategoory extends StatelessWidget {
                             },
                           );
                         }
-                        return const SizedBox.shrink();
+
+                        // return const SizedBox.shrink();
                       },
                     ),
+                    if (newList.isEmpty) const CustomEmptySate()
                   ],
                 ),
               ),

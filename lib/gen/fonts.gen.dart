@@ -10,6 +10,15 @@
 class FontFamily {
   FontFamily._();
 
+  /// Font family: KantumruyPro
+  static const String kantumruyPro = 'KantumruyPro';
+
+  /// Font family: Koulen
+  static const String koulen = 'Koulen';
+
+  /// Font family: Moulpali
+  static const String moulpali = 'Moulpali';
+
   /// Font family: Poppins-Bold
   static const String poppinsBold = 'Poppins-Bold';
 

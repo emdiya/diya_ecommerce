@@ -18,6 +18,9 @@ class $AssetsImgGen {
   AssetGenImage get camSkyline =>
       const AssetGenImage('assets/img/cam_skyline.png');
 
+  /// File path: assets/img/dm_logo.png
+  AssetGenImage get dmLogo => const AssetGenImage('assets/img/dm_logo.png');
+
   /// File path: assets/img/logo_bg.png
   AssetGenImage get logoBg => const AssetGenImage('assets/img/logo_bg.png');
 
@@ -35,7 +38,7 @@ class $AssetsImgGen {
 
   /// List of all assets
   List<AssetGenImage> get values =>
-      [camSkyline, logoBg, profile, slider1, slider2, slider3];
+      [camSkyline, dmLogo, logoBg, profile, slider1, slider2, slider3];
 }
 
 class $AssetsSvgGen {
@@ -50,6 +53,15 @@ class $AssetsSvgGen {
   /// File path: assets/svg/car.svg
   SvgGenImage get car => const SvgGenImage('assets/svg/car.svg');
 
+  /// File path: assets/svg/check.svg
+  SvgGenImage get check => const SvgGenImage('assets/svg/check.svg');
+
+  /// File path: assets/svg/en_flag.svg
+  SvgGenImage get enFlag => const SvgGenImage('assets/svg/en_flag.svg');
+
+  /// File path: assets/svg/fav.svg
+  SvgGenImage get fav => const SvgGenImage('assets/svg/fav.svg');
+
   /// File path: assets/svg/favorite.svg
   SvgGenImage get favorite => const SvgGenImage('assets/svg/favorite.svg');
 
@@ -57,6 +69,12 @@ class $AssetsSvgGen {
   SvgGenImage get googleIcon => const SvgGenImage('assets/svg/google_icon.svg');
 
   $AssetsSvgHomeGen get home => const $AssetsSvgHomeGen();
+
+  /// File path: assets/svg/khmer_flag.svg
+  SvgGenImage get khmerFlag => const SvgGenImage('assets/svg/khmer_flag.svg');
+
+  /// File path: assets/svg/language.svg
+  SvgGenImage get language => const SvgGenImage('assets/svg/language.svg');
 
   /// File path: assets/svg/logout.svg
   SvgGenImage get logout => const SvgGenImage('assets/svg/logout.svg');
@@ -78,8 +96,13 @@ class $AssetsSvgGen {
   List<SvgGenImage> get values => [
         arrowBack,
         car,
+        check,
+        enFlag,
+        fav,
         favorite,
         googleIcon,
+        khmerFlag,
+        language,
         logout,
         nikeLogo,
         notification,

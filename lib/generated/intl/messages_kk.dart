@@ -22,7 +22,26 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "newarriveal": MessageLookupByLibrary.simpleMessage("ថ្មីៗៗ"),
-        "selectCategory": MessageLookupByLibrary.simpleMessage("ជ្រើសរើសប្រភេទ")
+        "all": MessageLookupByLibrary.simpleMessage("ទាំងអស់"),
+        "favorite": MessageLookupByLibrary.simpleMessage("ចូលចិត្ត"),
+        "getstart": MessageLookupByLibrary.simpleMessage("ចាប់ផ្តើម"),
+        "home": MessageLookupByLibrary.simpleMessage("ទំព័រដើម"),
+        "kid": MessageLookupByLibrary.simpleMessage("ក្មេង"),
+        "lookingForShoe": MessageLookupByLibrary.simpleMessage("ស្វែងរក"),
+        "men": MessageLookupByLibrary.simpleMessage("បុរស"),
+        "newarrival": MessageLookupByLibrary.simpleMessage("មកដល់ថ្មីៗ"),
+        "next": MessageLookupByLibrary.simpleMessage("បន្ទាប់"),
+        "nodata": MessageLookupByLibrary.simpleMessage("មិនមានទិន្នន័យ"),
+        "notification": MessageLookupByLibrary.simpleMessage("ដំណឹង"),
+        "other": MessageLookupByLibrary.simpleMessage("ផ្សេងៗ"),
+        "popular": MessageLookupByLibrary.simpleMessage("ពេញនិយម"),
+        "profile": MessageLookupByLibrary.simpleMessage("ផ្ទាល់ខ្លួន"),
+        "seeall": MessageLookupByLibrary.simpleMessage("បង្ហាញទាំងអស់"),
+        "selectCategory":
+            MessageLookupByLibrary.simpleMessage("ជ្រើសរើសប្រភេទ"),
+        "skip": MessageLookupByLibrary.simpleMessage("រំលង"),
+        "welcometodmstore":
+            MessageLookupByLibrary.simpleMessage("ស្វាគមន៍មកកាន់ ឌី អឹម ស្តរ"),
+        "women": MessageLookupByLibrary.simpleMessage("ស្រ្តី")
       };
 }
