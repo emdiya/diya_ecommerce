@@ -50,7 +50,8 @@ class FavoriteScreen extends StatelessWidget {
                       favoriteController.favoriteList[index].id;
                   favoriteController.favoriteList
                       .remove(favoriteController.favoriteList[index]);
-                  //remove  fav
+                  //!remove  fav
+
                   final idx = allProductList
                       .indexWhere((element) => element.id == currentIndex);
 

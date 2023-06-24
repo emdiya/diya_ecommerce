@@ -21,7 +21,7 @@ class CustomCardSwitchCategoory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final newList = allProductList
+    var newListCategory = allProductList
         .where((e) => e.category?.toLowerCase() == category.toLowerCase())
         .toList();
 
@@ -30,8 +30,8 @@ class CustomCardSwitchCategoory extends StatelessWidget {
         init: Get.find<HomeController>(),
         builder: (controller) {
           return Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const SizedBox(height: 10),
               Row(
@@ -60,10 +60,9 @@ class CustomCardSwitchCategoory extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    ...newList.asMap().entries.map(
+                    ...newListCategory.asMap().entries.map(
                       (e) {
                         {
-                          debugPrint("e.value: $e");
                           return CustomListCardProduct(
                             allProductModel: e.value,
                             isFav: e.value.isFav,
@@ -76,9 +75,11 @@ class CustomCardSwitchCategoory extends StatelessWidget {
                               } else {
                                 favoriteController.favoriteList.remove(e.value);
                               }
-                              allProductList[e.key] = allProductList[e.key]
+                              debugPrint(
+                                  '-------is click ${newListCategory[e.key]}');
+                              newListCategory[e.key] = newListCategory[e.key]
                                   .copyWith(
-                                      isFav: !allProductList[e.key].isFav);
+                                      isFav: !newListCategory[e.key].isFav);
                               controller.update();
                             },
                           );
@@ -87,10 +88,18 @@ class CustomCardSwitchCategoory extends StatelessWidget {
                         // return const SizedBox.shrink();
                       },
                     ),
-                    if (newList.isEmpty) const CustomEmptySate()
                   ],
                 ),
               ),
+              Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    if (newListCategory.isEmpty) const CustomEmptySate()
+                  ],
+                ),
+              )
             ],
           );
         });
