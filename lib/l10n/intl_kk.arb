@@ -1,0 +1,22 @@
+{
+    "@@local": "kk",
+    "home": "ទំព័រដើម",
+    "favorite": "ចូលចិត្ត",
+    "notification": "ដំណឹង",
+    "profile": "ផ្ទាល់ខ្លួន",
+    "all": "ទាំងអស់",
+    "men": "បុរស",
+    "women": "ស្រ្តី",
+    "kid": "ក្មេង",
+    "other": "ផ្សេងៗ",
+    "selectCategory": "ជ្រើសរើសប្រភេទ",
+    "newarrival": "មកដល់ថ្មីៗ",
+    "lookingForShoe": "ស្វែងរក",
+    "seeall": "បង្ហាញទាំងអស់",
+    "popular": "ពេញនិយម",
+    "welcometodmstore": "ស្វាគមន៍មកកាន់ ឌី អឹម ស្តរ",
+    "skip": "រំលង",
+    "next": "បន្ទាប់",
+    "getstart": "ចាប់ផ្តើម",
+    "nodata": "មិនមានទិន្នន័យ"
+}

@@ -1,0 +1,22 @@
+{
+    "@@local": "en",
+    "home": "Home",
+    "favorite": "Favorite",
+    "notification": "Notification",
+    "profile": "Profile",
+    "all": "All Shoes",
+    "men": "Men",
+    "women": "Women",
+    "kid": "Kid",
+    "other": "Ohter",
+    "selectCategory": "Select Category",
+    "newarrival": "New Arrival",
+    "lookingForShoe": "looking for Shoe",
+    "seeall": "See All",
+    "popular": "Popular Shoes",
+    "welcometodmstore": "WELCOME TO DM STORE",
+    "skip": "Skip",
+    "next": "Next",
+    "getstart": "Get Start",
+    "nodata": "No Data"
+}
