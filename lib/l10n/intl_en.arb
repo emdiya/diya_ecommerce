@@ -18,5 +18,22 @@
     "skip": "Skip",
     "next": "Next",
     "getstart": "Get Start",
-    "nodata": "No Data"
+    "nodata": "No Data",
+    "chooselanguage": "Choose Language",
+    "khmer": "Khmer",
+    "english": "English",
+    "hello_again": "Hello Again",
+    "fill_your_detail": "Fill your details or continue with social media",
+    "email_address": "Email Address",
+    "email": "Email",
+    "password": "Password",
+    "recovery_password": "Recovery Password",
+    "sign_in": "Sign In",
+    "sign_in_google": "Sign In With Google",
+    "new_user": "New User",
+    "create_account": "Create Account",
+    "register_account": "Regiser Account",
+    "your_name": "Your Name",
+    "already_have_account": "Already Have Account",
+    "log_in": "Log In"
 }

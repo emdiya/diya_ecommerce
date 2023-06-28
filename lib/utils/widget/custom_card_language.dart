@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../gen/fonts.gen.dart';
+import '../controller/gloabal_controller.dart';
+
 class CustomCardLanguage extends StatelessWidget {
   final GestureTapCallback? ontap;
   final String? language;
@@ -36,25 +39,21 @@ class CustomCardLanguage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   isPrefixImage!
-                      ? ClipRRect(
-                          borderRadius: BorderRadius.circular(100),
-                          child: Container(
-                            width: 30,
-                            height: 30,
-                            decoration: const BoxDecoration(
-                              color: Colors.red,
-                              shape: BoxShape.circle,
-                            ),
-                            child: isSvg!
-                                ? SvgPicture.asset(
-                                    imageUrl!,
-                                    fit: BoxFit.cover,
-                                  )
-                                : Image.asset(
-                                    imageUrl!,
-                                    fit: BoxFit.cover,
-                                  ),
+                      ? Container(
+                          width: 30,
+                          height: 30,
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
                           ),
+                          child: isSvg!
+                              ? SvgPicture.asset(
+                                  imageUrl!,
+                                  fit: BoxFit.cover,
+                                )
+                              : Image.asset(
+                                  imageUrl!,
+                                  fit: BoxFit.cover,
+                                ),
                         )
                       : const SizedBox(),
                   SizedBox(width: isPrefixImage! ? 15 : 0),
@@ -64,7 +63,12 @@ class CustomCardLanguage extends StatelessWidget {
                     child: Center(
                       child: Text(
                         language!,
-                        style: Theme.of(context).textTheme.titleMedium,
+                        style:
+                            Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  fontFamily: App.isEnglish
+                                      ? FontFamily.poppinsBold
+                                      : FontFamily.kantumruyPro,
+                                ),
                       ),
                     ),
                   ),

@@ -1,4 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:diya_ecomerce/utils/controller/gloabal_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -208,13 +209,18 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                     : AppColor.textGrey6,
             hintStyle: Theme.of(context).textTheme.titleLarge!.copyWith(
                   color: AppColor.textBlackLight.withOpacity(0.2),
-                  fontFamily: FontFamily.poppinsRegular,
+                  fontFamily: App.isEnglish
+                      ? FontFamily.poppinsRegular
+                      : FontFamily.kantumruyPro,
                   fontSize: 16,
-                  fontWeight: FontWeight.w600,
+                  fontWeight: App.isEnglish ? FontWeight.w600 : FontWeight.w400,
                 ),
             labelStyle: Theme.of(context).textTheme.titleLarge!.copyWith(
                   color: AppColor.textBlackLight,
                   fontWeight: FontWeight.w400,
+                  fontFamily: App.isEnglish
+                      ? FontFamily.poppinsRegular
+                      : FontFamily.kantumruyPro,
                 ),
             errorBorder: blackborderStyle,
             enabledBorder: widget.isValidated!
@@ -296,9 +302,9 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   OutlineInputBorder borderStyleTrue = OutlineInputBorder(
     borderRadius: BorderRadius.circular(10),
     borderSide: BorderSide(
-      width: 1.5,
-      // color: AppColor.primaryColor,
-      color: AppColor.textGrey6,
+      width: 0.8,
+      color: AppColor.primaryColor,
+      // color: AppColor.debugPrint,
     ),
   );
 

@@ -9,6 +9,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../generated/l10n.dart';
+import '../../../../utils/controller/gloabal_controller.dart';
+
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
 
@@ -47,26 +50,32 @@ class RegisterScreen extends StatelessWidget {
                       child: Column(
                         children: [
                           Text(
-                            'Resginter Account!',
+                            S.current.register_account,
                             style: Theme.of(context)
                                 .textTheme
                                 .headlineLarge
                                 ?.copyWith(
-                                  fontFamily: FontFamily.ralewayBold,
+                                  fontFamily: App.isEnglish
+                                      ? FontFamily.ralewayBold
+                                      : FontFamily.kantumruyPro,
                                   color: AppColor.textBlackLight,
                                 ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left: 60, right: 60),
+                            padding: const EdgeInsets.only(
+                                top: 10, left: 60, right: 60),
                             child: Text(
                               textAlign: TextAlign.center,
-                              'Fill your details or continue with social media',
+                              S.current.fill_your_detail,
                               style: Theme.of(context)
                                   .textTheme
                                   .labelMedium
                                   ?.copyWith(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w400,
+                                    fontFamily: App.isEnglish
+                                        ? FontFamily.poppinsRegular
+                                        : FontFamily.kantumruyPro,
                                     color: AppColor.textGrey1,
                                   ),
                               overflow: TextOverflow.clip,
@@ -77,46 +86,52 @@ class RegisterScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 30),
                     Text(
-                      'Your Name',
+                      S.current.your_name,
                       style: Theme.of(context).textTheme.labelMedium?.copyWith(
                             fontSize: 16,
-                            fontFamily: FontFamily.ralewayRegular,
+                            fontFamily: App.isEnglish
+                                ? FontFamily.ralewayRegular
+                                : FontFamily.kantumruyPro,
                             fontWeight: FontWeight.w500,
                             color: AppColor.textBlackLight,
                           ),
                     ),
                     const SizedBox(height: 12),
-                    const CustomTextFormField(
-                      hintext: 'Your Name',
+                    CustomTextFormField(
+                      hintext: S.current.your_name,
                     ),
                     const SizedBox(height: 30),
                     Text(
-                      'Email Address',
+                      S.current.email_address,
                       style: Theme.of(context).textTheme.labelMedium?.copyWith(
                             fontSize: 16,
-                            fontFamily: FontFamily.ralewayRegular,
+                            fontFamily: App.isEnglish
+                                ? FontFamily.ralewayRegular
+                                : FontFamily.kantumruyPro,
                             fontWeight: FontWeight.w500,
                             color: AppColor.textBlackLight,
                           ),
                     ),
                     const SizedBox(height: 12),
-                    const CustomTextFormField(
-                      hintext: 'Email',
+                    CustomTextFormField(
+                      hintext: S.current.email,
                     ),
                     const SizedBox(height: 30),
                     Text(
-                      'Password',
+                      S.current.password,
                       style: Theme.of(context).textTheme.labelMedium?.copyWith(
                             fontSize: 16,
-                            fontFamily: FontFamily.ralewayRegular,
+                            fontFamily: App.isEnglish
+                                ? FontFamily.ralewayRegular
+                                : FontFamily.kantumruyPro,
                             fontWeight: FontWeight.w500,
                             color: AppColor.textBlackLight,
                           ),
                     ),
                     const SizedBox(height: 12),
-                    const CustomTextFormField(
+                    CustomTextFormField(
                       obscureText: true,
-                      hintext: 'Password',
+                      hintext: S.current.password,
                       isPassword: true,
                     ),
                     const SizedBox(height: 12),
@@ -125,14 +140,14 @@ class RegisterScreen extends StatelessWidget {
                       onTap: () {
                         context.go(Routes.HOME_SCREEN);
                       },
-                      title: 'Sign In',
+                      title: S.current.sign_in,
                     ),
                     const SizedBox(height: 24),
                     CustomClickButton(
                       imgUrl: Assets.svg.googleIcon.path,
                       color: AppColor.textGrey6,
                       colortxt: AppColor.textBlackLight,
-                      title: 'Sign In With Google',
+                      title: S.current.sign_in_google,
                     ),
                   ],
                 ),
@@ -145,10 +160,12 @@ class RegisterScreen extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               child: Text.rich(
                 TextSpan(
-                  text: 'New User? ',
+                  text: "${S.current.already_have_account}? ",
                   style: Theme.of(context).textTheme.labelMedium?.copyWith(
                         fontSize: 16,
-                        fontFamily: FontFamily.ralewayRegular,
+                        fontFamily: App.isEnglish
+                            ? FontFamily.ralewayRegular
+                            : FontFamily.kantumruyPro,
                         fontWeight: FontWeight.w500,
                         color: AppColor.textGrey2,
                       ),
@@ -158,9 +175,11 @@ class RegisterScreen extends StatelessWidget {
                         ..onTap = () {
                           debugPrint('TextSpan tapped!');
                         },
-                      text: 'Create Account',
+                      text: S.current.log_in,
                       style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                            fontFamily: FontFamily.ralewayRegular,
+                            fontFamily: App.isEnglish
+                                ? FontFamily.ralewayRegular
+                                : FontFamily.kantumruyPro,
                             fontSize: 16,
                             color: AppColor.textMediumBlack,
                           ),

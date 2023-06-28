@@ -60,4 +60,55 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get nodata => 'No Data';
+
+  @override
+  String get chooselanguage => 'Choose Language';
+
+  @override
+  String get khmer => 'Khmer';
+
+  @override
+  String get english => 'English';
+
+  @override
+  String get hello_again => 'Hello Again';
+
+  @override
+  String get fill_your_detail => 'Fill your details or continue with social media';
+
+  @override
+  String get email_address => 'Email Address';
+
+  @override
+  String get email => 'Email';
+
+  @override
+  String get password => 'Password';
+
+  @override
+  String get recovery_password => 'Recovery Password';
+
+  @override
+  String get sign_in => 'Sign In';
+
+  @override
+  String get sign_in_google => 'Sign In With Google';
+
+  @override
+  String get new_user => 'New User';
+
+  @override
+  String get create_account => 'Create Account';
+
+  @override
+  String get register_account => 'Regiser Account';
+
+  @override
+  String get your_name => 'Your Name';
+
+  @override
+  String get already_have_account => 'Already Have Account';
+
+  @override
+  String get log_in => 'Log In';
 }

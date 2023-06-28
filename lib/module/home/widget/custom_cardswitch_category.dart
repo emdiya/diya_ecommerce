@@ -21,10 +21,12 @@ class CustomCardSwitchCategoory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var newListCategory = allProductList
+    List newListCategory = allProductList
         .where((e) => e.category?.toLowerCase() == category.toLowerCase())
         .toList();
-
+    if (category.toLowerCase() == 'all shoes') {
+      newListCategory.addAll(allProductList);
+    }
     final favoriteController = Get.put(FavoriteController());
     return GetBuilder<HomeController>(
         init: Get.find<HomeController>(),

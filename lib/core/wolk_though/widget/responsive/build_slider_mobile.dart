@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:diya_ecomerce/constant/app_colors.dart';
 import 'package:diya_ecomerce/core/wolk_though/controller/onboarding_controller.dart';
 import 'package:diya_ecomerce/gen/fonts.gen.dart';
@@ -66,11 +68,16 @@ class BuildSliderMobile extends StatelessWidget {
                                   margin: const EdgeInsets.only(bottom: 10),
                                   width: double.infinity,
                                   child: Text(
-                                    'Choose Language',
+                                    S.current.chooselanguage,
                                     style: Theme.of(context)
                                         .textTheme
                                         .titleLarge!
-                                        .copyWith(fontSize: 20),
+                                        .copyWith(
+                                          fontSize: 20,
+                                          fontFamily: App.isEnglish
+                                              ? FontFamily.poppinsBold
+                                              : FontFamily.kantumruyPro,
+                                        ),
                                   ),
                                 ),
                                 const Divider(
@@ -79,10 +86,10 @@ class BuildSliderMobile extends StatelessWidget {
                                   color: Color(0xffDDDDDD),
                                 ),
                                 CustomCardLanguage(
-                                  language: 'ភាសាខ្មែរ',
+                                  language: S.current.khmer,
                                   select: Get.locale!.languageCode ==
                                       Languages.khmer.code,
-                                  imageUrl: 'assets/svg/en_flag.svg',
+                                  imageUrl: 'assets/svg/khmer_flag.svg',
                                   ontap: () {
                                     Get.put(App())
                                         .changeLanguage(Languages.khmer);
@@ -91,7 +98,7 @@ class BuildSliderMobile extends StatelessWidget {
                                   },
                                 ),
                                 CustomCardLanguage(
-                                  language: 'English',
+                                  language: S.current.english,
                                   select: Get.locale!.languageCode ==
                                       Languages.english.code,
                                   imageUrl: 'assets/svg/en_flag.svg',
@@ -142,25 +149,31 @@ class BuildSliderMobile extends StatelessWidget {
             index == 0
                 ? Padding(
                     padding: EdgeInsets.only(
-                      left: Get.put(App()).localLang.value == 'en' ? 80 : 100,
-                      right: Get.put(App()).localLang.value == 'en' ? 80 : 100,
+                      left: App.isEnglish && Platform.isIOS
+                          ? 80
+                          : Platform.isAndroid
+                              ? 100
+                              : 100,
+                      right: App.isEnglish && Platform.isIOS
+                          ? 80
+                          : Platform.isAndroid
+                              ? 100
+                              : 100,
                       top: 150,
                     ),
                     child: Text(
                       S.current.welcometodmstore,
                       textAlign: TextAlign.center,
                       overflow: TextOverflow.clip,
-                      style: Theme.of(context)
-                          .textTheme
-                          .headlineLarge
-                          ?.copyWith(
-                            height: App.isEnglish ? 1.2 : 1.4,
-                            fontWeight: FontWeight.w800,
-                            color: AppColor.textWhite,
-                            fontFamily: Get.put(App()).localLang.value == 'en'
-                                ? FontFamily.poppinsSemiBold
-                                : FontFamily.koulen,
-                          ),
+                      style:
+                          Theme.of(context).textTheme.headlineLarge?.copyWith(
+                                height: App.isEnglish ? 1.2 : 1.6,
+                                fontWeight: FontWeight.w800,
+                                color: AppColor.textWhite,
+                                fontFamily: App.isEnglish
+                                    ? FontFamily.poppinsSemiBold
+                                    : FontFamily.koulen,
+                              ),
                     ).animate()
                       ..flipV(
                         curve: Curves.easeInOut,

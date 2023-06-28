@@ -60,4 +60,55 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get nodata => 'មិនមានទិន្នន័យ';
+
+  @override
+  String get chooselanguage => 'ជ្រើសរើសភាសា';
+
+  @override
+  String get khmer => 'ភាសាខ្មែរ';
+
+  @override
+  String get english => 'ភាសាអង់គ្លេស';
+
+  @override
+  String get hello_again => 'ស្វាគមន៍ម្តងទៀត';
+
+  @override
+  String get fill_your_detail => 'បំពេញព័ត៌មានលម្អិតរបស់អ្នក ឬភ្ចាប់ជាមួយប្រព័ន្ធផ្សព្វផ្សាយសង្គម';
+
+  @override
+  String get email_address => 'អាសយដ្ឋាន អ៊ីម៉ែល';
+
+  @override
+  String get email => 'អ៊ីម៉ែល';
+
+  @override
+  String get password => 'លេខសម្ងាត់';
+
+  @override
+  String get recovery_password => 'សង្គ្រោះពាក្យសម្ងាត់';
+
+  @override
+  String get sign_in => 'ចុះឈ្មោះ';
+
+  @override
+  String get sign_in_google => 'ចុះឈ្មោះជាមួយ google';
+
+  @override
+  String get new_user => 'អ្នកប្រើថ្មី';
+
+  @override
+  String get create_account => 'បង្កើតគណនី';
+
+  @override
+  String get register_account => 'ស្នើចុះឈ្នោះ';
+
+  @override
+  String get your_name => 'ឈ្មោះរបស់អ្នក';
+
+  @override
+  String get already_have_account => 'មានគណនីរួចហើយ';
+
+  @override
+  String get log_in => 'ចូលគណនី';
 }

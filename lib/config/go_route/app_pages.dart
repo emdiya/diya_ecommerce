@@ -12,7 +12,7 @@ final GlobalKey<NavigatorState> shellNavigatorKey =
 
 class AppPages {
   AppPages._();
-  static const intial = Routes.HOME_SCREEN;
+  static const intial = Routes.SCREESPLASH_SCREEN;
   static final AppPages instance = AppPages._();
 
   GoRouter router = GoRouter(
