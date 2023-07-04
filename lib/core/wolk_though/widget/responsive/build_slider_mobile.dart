@@ -152,12 +152,12 @@ class BuildSliderMobile extends StatelessWidget {
                       left: App.isEnglish && Platform.isIOS
                           ? 80
                           : Platform.isAndroid
-                              ? 100
+                              ? 115
                               : 100,
                       right: App.isEnglish && Platform.isIOS
                           ? 80
                           : Platform.isAndroid
-                              ? 100
+                              ? 115
                               : 100,
                       top: 150,
                     ),
