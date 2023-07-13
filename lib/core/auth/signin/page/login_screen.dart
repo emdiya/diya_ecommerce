@@ -150,12 +150,25 @@ class LogInScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 24),
                     CustomClickButton(
-                      onTap: () {
+                      onTap: () async {
                         if (authControler.emailtxt.value.text ==
                                 authControler.email.value &&
                             authControler.passwordtxt.value.text ==
                                 authControler.password.value) {
-                          context.go(Routes.HOME_SCREEN);
+                          authControler.isLoading.value
+                              ? const CircularProgressIndicator()
+                              :
+                              // Future.delayed(
+                              //   const Duration(microseconds: 12000),
+                              //   () {
+                              //     // const LoadingScreen(
+                              //     //   isTransparent: true,
+                              //     // );
+
+                              //   },
+                              // );
+
+                              context.go(Routes.HOME_SCREEN);
                         } else {}
                       },
                       title: S.current.sign_in,

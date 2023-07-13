@@ -140,8 +140,8 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                                 )
                               : SvgPicture.asset(
                                   'assets/svg/remove_eye.svg',
-                                  colorFilter: const ColorFilter.mode(
-                                      Colors.red, BlendMode.srcIn),
+                                  colorFilter: ColorFilter.mode(
+                                      AppColor.primaryColor, BlendMode.srcIn),
                                   height: 16,
                                   width: 16,
                                   fit: BoxFit.cover,

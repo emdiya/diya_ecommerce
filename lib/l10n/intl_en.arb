@@ -35,5 +35,9 @@
     "register_account": "Regiser Account",
     "your_name": "Your Name",
     "already_have_account": "Already Have Account",
-    "log_in": "Log In"
+    "log_in": "Log In",
+    "onboard_txt1": "Let`s Start With DM Store",
+    "onboard_txt1_desp":"Smart , Gorgeous & Fashionable Collection Explor Now",
+    "onboard_txt2": "You Have the Power To",
+    "onboard_txt2_desp":"Lots of beautiful Model in your hand"
 }

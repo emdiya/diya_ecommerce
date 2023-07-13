@@ -111,4 +111,16 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get log_in => 'ចូលគណនី';
+
+  @override
+  String get onboard_txt1 => 'តោះចាប់ផ្តើមជាមួយ DM Store';
+
+  @override
+  String get onboard_txt1_desp => 'ឆ្លាតវ៉ៃ , ការប្រមូលផ្តុំម៉ូតស្អាតៗ និងទាន់សម័យ រុករកឥឡូវនេះ';
+
+  @override
+  String get onboard_txt2 => 'អ្នកអាចធ្វើបាន';
+
+  @override
+  String get onboard_txt2_desp => 'មានម៉ូតស្អាតៗៗជាច្រើននៅក្នុងដៃរបស់អ្នក';
 }

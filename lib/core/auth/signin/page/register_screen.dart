@@ -173,7 +173,8 @@ class RegisterScreen extends StatelessWidget {
                     TextSpan(
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
-                          debugPrint('TextSpan tapped!');
+                          debugPrint('---Pushing to Login Screen');
+                          context.push(Routes.LOGIN_SCREEN);
                         },
                       text: S.current.log_in,
                       style: Theme.of(context).textTheme.labelSmall?.copyWith(

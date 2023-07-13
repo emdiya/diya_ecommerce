@@ -49,6 +49,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "nodata": MessageLookupByLibrary.simpleMessage("No Data"),
         "notification": MessageLookupByLibrary.simpleMessage("Notification"),
+        "onboard_txt1":
+            MessageLookupByLibrary.simpleMessage("Let`s Start With DM Store"),
+        "onboard_txt1_desp": MessageLookupByLibrary.simpleMessage(
+            "Smart , Gorgeous & Fashionable Collection Explor Now"),
+        "onboard_txt2":
+            MessageLookupByLibrary.simpleMessage("You Have the Power To"),
+        "onboard_txt2_desp": MessageLookupByLibrary.simpleMessage(
+            "Lots of beautiful Model in your hand"),
         "other": MessageLookupByLibrary.simpleMessage("Ohter"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "popular": MessageLookupByLibrary.simpleMessage("Popular Shoes"),

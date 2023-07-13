@@ -111,4 +111,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get log_in => 'Log In';
+
+  @override
+  String get onboard_txt1 => 'Let`s Start With DM Store';
+
+  @override
+  String get onboard_txt1_desp => 'Smart , Gorgeous & Fashionable Collection Explor Now';
+
+  @override
+  String get onboard_txt2 => 'You Have the Power To';
+
+  @override
+  String get onboard_txt2_desp => 'Lots of beautiful Model in your hand';
 }

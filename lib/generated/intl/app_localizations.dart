@@ -308,6 +308,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Log In'**
   String get log_in;
+
+  /// No description provided for @onboard_txt1.
+  ///
+  /// In en, this message translates to:
+  /// **'Let`s Start With DM Store'**
+  String get onboard_txt1;
+
+  /// No description provided for @onboard_txt1_desp.
+  ///
+  /// In en, this message translates to:
+  /// **'Smart , Gorgeous & Fashionable Collection Explor Now'**
+  String get onboard_txt1_desp;
+
+  /// No description provided for @onboard_txt2.
+  ///
+  /// In en, this message translates to:
+  /// **'You Have the Power To'**
+  String get onboard_txt2;
+
+  /// No description provided for @onboard_txt2_desp.
+  ///
+  /// In en, this message translates to:
+  /// **'Lots of beautiful Model in your hand'**
+  String get onboard_txt2_desp;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

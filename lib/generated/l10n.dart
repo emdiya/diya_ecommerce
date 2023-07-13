@@ -409,6 +409,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Let's Start With DM Store`
+  String get onboard_txt1 {
+    return Intl.message(
+      'Let`s Start With DM Store',
+      name: 'onboard_txt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Smart , Gorgeous & Fashionable Collection Explor Now`
+  String get onboard_txt1_desp {
+    return Intl.message(
+      'Smart , Gorgeous & Fashionable Collection Explor Now',
+      name: 'onboard_txt1_desp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You Have the Power To`
+  String get onboard_txt2 {
+    return Intl.message(
+      'You Have the Power To',
+      name: 'onboard_txt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lots of beautiful Model in your hand`
+  String get onboard_txt2_desp {
+    return Intl.message(
+      'Lots of beautiful Model in your hand',
+      name: 'onboard_txt2_desp',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

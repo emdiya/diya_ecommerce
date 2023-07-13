@@ -47,6 +47,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "next": MessageLookupByLibrary.simpleMessage("បន្ទាប់"),
         "nodata": MessageLookupByLibrary.simpleMessage("មិនមានទិន្នន័យ"),
         "notification": MessageLookupByLibrary.simpleMessage("ដំណឹង"),
+        "onboard_txt1":
+            MessageLookupByLibrary.simpleMessage("តោះចាប់ផ្តើមជាមួយ DM Store"),
+        "onboard_txt1_desp": MessageLookupByLibrary.simpleMessage(
+            "ឆ្លាតវ៉ៃ , ការប្រមូលផ្តុំម៉ូតស្អាតៗ និងទាន់សម័យ រុករកឥឡូវនេះ"),
+        "onboard_txt2": MessageLookupByLibrary.simpleMessage("អ្នកអាចធ្វើបាន"),
+        "onboard_txt2_desp": MessageLookupByLibrary.simpleMessage(
+            "មានម៉ូតស្អាតៗៗជាច្រើននៅក្នុងដៃរបស់អ្នក"),
         "other": MessageLookupByLibrary.simpleMessage("ផ្សេងៗ"),
         "password": MessageLookupByLibrary.simpleMessage("លេខសម្ងាត់"),
         "popular": MessageLookupByLibrary.simpleMessage("ពេញនិយម"),
