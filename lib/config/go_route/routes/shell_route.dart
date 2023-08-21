@@ -3,6 +3,7 @@ import 'package:diya_ecomerce/config/go_route/app_routes.dart';
 import 'package:diya_ecomerce/module/bottom_navigation_bar/page/bottom_navigation_bar_sreen.dart';
 import 'package:diya_ecomerce/module/favorite/page/favorite_screen.dart';
 import 'package:diya_ecomerce/module/home/page/home_screen.dart';
+import 'package:diya_ecomerce/module/profile/page/profile_screen.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../module/notification/page/notification_screen.dart';
@@ -38,7 +39,7 @@ final shellRoute = ShellRoute(
         parentNavigatorKey: shellNavigatorKey,
         path: Routes.PROFILE_SCREEN,
         pageBuilder: (context, state) {
-          return const NoTransitionPage(child: HomeScreen());
+          return const NoTransitionPage(child: ProfileScreen());
         }),
   ],
 );
