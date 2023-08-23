@@ -53,6 +53,7 @@ dependencies:
   smooth_page_indicator: ^1.1.0
   flutter_launcher_icons: ^0.13.1
   rive: ^0.11.3
+  line_awesome_flutter: ^2.0.0
 
 
 flutter_launcher_icons:
@@ -119,6 +120,7 @@ flutter:
     - assets/svg/
     - assets/svg/bottom_navigation_bar/
     - assets/svg/home/
+    - assets/svg/profile/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

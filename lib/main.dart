@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
         title: 'Diya E-Comerce',
         theme: ThemeData(
           useMaterial3: true,
+          // appBarTheme: const AppBarTheme(color: Colors.transparent),
         ),
         locale: Get.locale,
         supportedLocales: S.delegate.supportedLocales,

@@ -9,6 +9,7 @@ abstract class Routes {
   static const FAVORITE_SCREEN = Paths.FAVORITE_SCREEN;
   static const NOTIFICATION_SCREEN = Paths.NOTIFICATION_SCREEN;
   static const PROFILE_SCREEN = Paths.PROFILE_SCREEN;
+  static const UPDATE_SCREEN = Paths.UPDATE_SCREEN;
 }
 
 abstract class Paths {
@@ -20,4 +21,5 @@ abstract class Paths {
   static const FAVORITE_SCREEN = '/favorite';
   static const NOTIFICATION_SCREEN = '/notification';
   static const PROFILE_SCREEN = '/profile';
+  static const UPDATE_SCREEN = '/update';
 }
