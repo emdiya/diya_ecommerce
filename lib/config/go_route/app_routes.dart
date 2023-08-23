@@ -10,6 +10,7 @@ abstract class Routes {
   static const NOTIFICATION_SCREEN = Paths.NOTIFICATION_SCREEN;
   static const PROFILE_SCREEN = Paths.PROFILE_SCREEN;
   static const UPDATE_SCREEN = Paths.UPDATE_SCREEN;
+  static const SETTING_SCREEN = Paths.SETTING_SCREEN;
 }
 
 abstract class Paths {
@@ -22,4 +23,5 @@ abstract class Paths {
   static const NOTIFICATION_SCREEN = '/notification';
   static const PROFILE_SCREEN = '/profile';
   static const UPDATE_SCREEN = '/update';
+  static const SETTING_SCREEN = '/settingapp';
 }

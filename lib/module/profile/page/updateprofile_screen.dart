@@ -119,11 +119,11 @@ class UpdateProfileScreen extends StatelessWidget {
                       children: [
                         const Text.rich(
                           TextSpan(
-                            text: "TJoine",
+                            text: "Joined date: ",
                             style: TextStyle(fontSize: 12),
                             children: [
                               TextSpan(
-                                  text: "ToJoine",
+                                  text: "01/01/2023",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 12))
@@ -133,8 +133,7 @@ class UpdateProfileScreen extends StatelessWidget {
                         ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                              backgroundColor:
-                                  Colors.redAccent.withOpacity(0.1),
+                              backgroundColor: Colors.blue.withOpacity(0.1),
                               elevation: 0,
                               foregroundColor: Colors.red,
                               shape: const StadiumBorder(),

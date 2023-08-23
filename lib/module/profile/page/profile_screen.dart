@@ -8,12 +8,27 @@ import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
 import '../widget/custom_profilemenu.dart';
 
-class ProfileScreen extends StatelessWidget {
+class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
 
   @override
+  State<ProfileScreen> createState() => _ProfileScreenState();
+}
+
+class _ProfileScreenState extends State<ProfileScreen> {
+  IconData _currentIcon = LineAwesomeIcons.sun; // Initial icon
+
+  void _changeIcon() {
+    setState(() {
+      // Toggle between icons
+      _currentIcon = _currentIcon == LineAwesomeIcons.sun
+          ? LineAwesomeIcons.moon
+          : LineAwesomeIcons.sun;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    var isDark = MediaQuery.of(context).platformBrightness == Brightness.dark;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -29,8 +44,11 @@ class ProfileScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-              onPressed: () {},
-              icon: Icon(isDark ? LineAwesomeIcons.sun : LineAwesomeIcons.moon))
+            icon: Icon(_currentIcon),
+            onPressed: _changeIcon,
+            color: AppColor.primaryColor,
+            iconSize: 24.0,
+          )
         ],
       ),
       body: SingleChildScrollView(
@@ -97,13 +115,13 @@ class ProfileScreen extends StatelessWidget {
               const SizedBox(height: 30),
               const Divider(),
               const SizedBox(height: 10),
-
               //! -- MENU
               ProfileMenuWidget(
                 title: "Settings",
                 icon: LineAwesomeIcons.cog,
                 onPress: () {
                   debugPrint("----------> is click Setting");
+                  context.go(Routes.PROFILE_SCREEN + Routes.SETTING_SCREEN);
                 },
               ),
               ProfileMenuWidget(

@@ -2,6 +2,7 @@ import 'package:diya_ecomerce/config/go_route/app_routes.dart';
 import 'package:diya_ecomerce/config/go_route/routes/authorization.dart';
 import 'package:diya_ecomerce/config/go_route/routes/shell_route.dart';
 import 'package:diya_ecomerce/core/wolk_though/page/splash_screen.dart';
+import 'package:diya_ecomerce/module/profile/page/setting_screen.dart';
 import 'package:diya_ecomerce/utils/helper/extension/string_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -47,6 +48,15 @@ class AppPages {
             pageBuilder: (context, state) {
               return const NoTransitionPage(
                 child: UpdateProfileScreen(),
+              );
+            },
+          ),
+          GoRoute(
+            parentNavigatorKey: rootNavigatorKey,
+            path: Routes.SETTING_SCREEN.removeFirst(),
+            pageBuilder: (context, state) {
+              return const NoTransitionPage(
+                child: SettingScreen(),
               );
             },
           ),
