@@ -67,9 +67,7 @@ class _CustomSelectCategoryState extends State<CustomSelectCategory> {
                         ),
                         // alignment: Alignment.center,
                         child: Text(
-                          Get.put(App()).localLang.value == 'en'
-                              ? e.value.en
-                              : e.value.kh,
+                          App.isEnglish ? e.value.en : e.value.kh,
                           style:
                               Theme.of(context).textTheme.labelMedium?.copyWith(
                                     fontWeight: FontWeight.w400,

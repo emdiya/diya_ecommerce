@@ -2,10 +2,13 @@ import 'package:diya_ecomerce/utils/controller/gloabal_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
+import 'package:get_it/get_it.dart';
 
 import 'config/go_route/app_pages.dart';
+import 'config/theme/theme.dart';
 import 'generated/l10n.dart';
 
+final GetIt globalContext = GetIt.instance;
 void main() {
   runApp(const MyApp());
 }
@@ -17,6 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final globalControll = Get.put(App());
+    // Get.put(ThemeController());
     return GestureDetector(
       onTap: () => unFocus(context),
       child: GetMaterialApp.router(
@@ -26,8 +30,16 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Diya E-Comerce',
         theme: ThemeData(
-          useMaterial3: true,
-        ),
+            useMaterial3: true,
+            appBarTheme: const AppBarTheme(
+              centerTitle: true,
+              backgroundColor: Colors.transparent,
+            )
+            // appBarTheme: const AppBarTheme(color: Colors.transparent),
+            ),
+        //   theme: ThemeBase.theme(),
+        themeMode: ThemeMode.system,
+        darkTheme: ThemeBase.darkTheme(),
         locale: Get.locale,
         supportedLocales: S.delegate.supportedLocales,
         routeInformationProvider:
@@ -40,6 +52,13 @@ class MyApp extends StatelessWidget {
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
         ],
+
+        builder: (context, widget) {
+          if (!globalContext.isRegistered<BuildContext>()) {
+            globalContext.registerSingleton<BuildContext>(context);
+          }
+          return widget!;
+        },
       ),
     );
   }

@@ -206,6 +206,150 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No Data'**
   String get nodata;
+
+  /// No description provided for @chooselanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose Language'**
+  String get chooselanguage;
+
+  /// No description provided for @khmer.
+  ///
+  /// In en, this message translates to:
+  /// **'Khmer'**
+  String get khmer;
+
+  /// No description provided for @english.
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get english;
+
+  /// No description provided for @hello_again.
+  ///
+  /// In en, this message translates to:
+  /// **'Hello Again'**
+  String get hello_again;
+
+  /// No description provided for @fill_your_detail.
+  ///
+  /// In en, this message translates to:
+  /// **'Fill your details or continue with social media'**
+  String get fill_your_detail;
+
+  /// No description provided for @email_address.
+  ///
+  /// In en, this message translates to:
+  /// **'Email Address'**
+  String get email_address;
+
+  /// No description provided for @email.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get email;
+
+  /// No description provided for @password.
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get password;
+
+  /// No description provided for @recovery_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Recovery Password'**
+  String get recovery_password;
+
+  /// No description provided for @sign_in.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign In'**
+  String get sign_in;
+
+  /// No description provided for @sign_in_google.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign In With Google'**
+  String get sign_in_google;
+
+  /// No description provided for @new_user.
+  ///
+  /// In en, this message translates to:
+  /// **'New User'**
+  String get new_user;
+
+  /// No description provided for @create_account.
+  ///
+  /// In en, this message translates to:
+  /// **'Create Account'**
+  String get create_account;
+
+  /// No description provided for @register_account.
+  ///
+  /// In en, this message translates to:
+  /// **'Regiser Account'**
+  String get register_account;
+
+  /// No description provided for @your_name.
+  ///
+  /// In en, this message translates to:
+  /// **'Your Name'**
+  String get your_name;
+
+  /// No description provided for @already_have_account.
+  ///
+  /// In en, this message translates to:
+  /// **'Already Have Account'**
+  String get already_have_account;
+
+  /// No description provided for @log_in.
+  ///
+  /// In en, this message translates to:
+  /// **'Log In'**
+  String get log_in;
+
+  /// No description provided for @onboard_txt1.
+  ///
+  /// In en, this message translates to:
+  /// **'Let`s Start With DM Store'**
+  String get onboard_txt1;
+
+  /// No description provided for @onboard_txt1_desp.
+  ///
+  /// In en, this message translates to:
+  /// **'Smart , Gorgeous & Fashionable Collection Explor Now'**
+  String get onboard_txt1_desp;
+
+  /// No description provided for @onboard_txt2.
+  ///
+  /// In en, this message translates to:
+  /// **'You Have the Power To'**
+  String get onboard_txt2;
+
+  /// No description provided for @onboard_txt2_desp.
+  ///
+  /// In en, this message translates to:
+  /// **'Lots of beautiful Model in your hand'**
+  String get onboard_txt2_desp;
+
+  /// No description provided for @setting.
+  ///
+  /// In en, this message translates to:
+  /// **'Setting'**
+  String get setting;
+
+  /// No description provided for @language.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get language;
+
+  /// No description provided for @dark_mode.
+  ///
+  /// In en, this message translates to:
+  /// **'Dark MOde'**
+  String get dark_mode;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

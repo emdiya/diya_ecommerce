@@ -18,9 +18,10 @@ PreferredSizeWidget customAppbar({
   final Function()? onTapAction,
   final double? toolbarHeight,
   final String? iconAction,
+  final bool? automaticallyImplyLeading,
 }) {
   return AppBar(
-    // automaticallyImplyLeading: false,
+    automaticallyImplyLeading: automaticallyImplyLeading ?? false,
     backgroundColor: bacbackgroundColor,
     leading: Padding(
       padding: const EdgeInsets.only(left: 20),

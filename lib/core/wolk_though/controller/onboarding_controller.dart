@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../gen/assets.gen.dart';
+import '../../../generated/l10n.dart';
 import '../model/on_boarding_model/on_boarding_model.dart';
 
 class OnboardingController extends GetxController {
@@ -17,13 +18,13 @@ class OnboardingController extends GetxController {
       path: Assets.img.slider2.path,
     ),
     OnBoardingModel(
-      title: "Let’s Start Journey With Nike",
-      subtitle: "Smart, Gorgeous & Fashionable Collection Explor Now",
+      title: S.current.onboard_txt1,
+      subtitle: S.current.onboard_txt1_desp,
       path: Assets.img.slider2.path,
     ),
     OnBoardingModel(
-      title: "You Have the Power To",
-      subtitle: "There Are Many Beautiful And Attractive Plants To Your Room",
+      title: S.current.onboard_txt2,
+      subtitle: S.current.onboard_txt2_desp,
       path: Assets.img.slider3.path,
     ),
   ];

@@ -6,6 +6,8 @@ import 'package:get/get.dart';
 import 'package:diya_ecomerce/constant/app_colors.dart';
 import 'package:diya_ecomerce/gen/fonts.gen.dart';
 
+import '../controller/gloabal_controller.dart';
+
 class CustomClickButton extends StatelessWidget {
   final String? title;
   final double? height;
@@ -48,7 +50,9 @@ class CustomClickButton extends StatelessWidget {
               Text(
                 '$title',
                 style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                      fontFamily: FontFamily.ralewayRegular,
+                      fontFamily: App.isEnglish
+                          ? FontFamily.ralewayRegular
+                          : FontFamily.kantumruyPro,
                       fontWeight: FontWeight.w600,
                       color: colortxt ?? AppColor.textWhite,
                     ),

@@ -68,4 +68,12 @@ final allProductList = [
     recommend: 'Best Seller',
     category: 'men',
   ),
+  // AllProductModel(
+  //   id: 120,
+  //   imgUrl: 'assets/img/slider2.png',
+  //   lable: 'Nike Air Other',
+  //   price: 199,
+  //   recommend: 'Best Seller',
+  //   category: 'other',
+  // ),
 ];

@@ -23,25 +23,58 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "all": MessageLookupByLibrary.simpleMessage("ទាំងអស់"),
+        "already_have_account":
+            MessageLookupByLibrary.simpleMessage("មានគណនីរួចហើយ"),
+        "chooselanguage": MessageLookupByLibrary.simpleMessage("ជ្រើសរើសភាសា"),
+        "create_account": MessageLookupByLibrary.simpleMessage("បង្កើតគណនី"),
+        "dark_mode": MessageLookupByLibrary.simpleMessage("ផ្ទៃងងឹត"),
+        "email": MessageLookupByLibrary.simpleMessage("អ៊ីម៉ែល"),
+        "email_address":
+            MessageLookupByLibrary.simpleMessage("អាសយដ្ឋាន អ៊ីម៉ែល"),
+        "english": MessageLookupByLibrary.simpleMessage("ភាសាអង់គ្លេស"),
         "favorite": MessageLookupByLibrary.simpleMessage("ចូលចិត្ត"),
+        "fill_your_detail": MessageLookupByLibrary.simpleMessage(
+            "បំពេញព័ត៌មានលម្អិតរបស់អ្នក ឬភ្ចាប់ជាមួយប្រព័ន្ធផ្សព្វផ្សាយសង្គម"),
         "getstart": MessageLookupByLibrary.simpleMessage("ចាប់ផ្តើម"),
+        "hello_again": MessageLookupByLibrary.simpleMessage("ស្វាគមន៍ម្តងទៀត"),
         "home": MessageLookupByLibrary.simpleMessage("ទំព័រដើម"),
+        "khmer": MessageLookupByLibrary.simpleMessage("ភាសាខ្មែរ"),
         "kid": MessageLookupByLibrary.simpleMessage("ក្មេង"),
+        "language": MessageLookupByLibrary.simpleMessage("ភាសា"),
+        "log_in": MessageLookupByLibrary.simpleMessage("ចូលគណនី"),
         "lookingForShoe": MessageLookupByLibrary.simpleMessage("ស្វែងរក"),
         "men": MessageLookupByLibrary.simpleMessage("បុរស"),
+        "new_user": MessageLookupByLibrary.simpleMessage("អ្នកប្រើថ្មី"),
         "newarrival": MessageLookupByLibrary.simpleMessage("មកដល់ថ្មីៗ"),
         "next": MessageLookupByLibrary.simpleMessage("បន្ទាប់"),
         "nodata": MessageLookupByLibrary.simpleMessage("មិនមានទិន្នន័យ"),
         "notification": MessageLookupByLibrary.simpleMessage("ដំណឹង"),
+        "onboard_txt1":
+            MessageLookupByLibrary.simpleMessage("តោះចាប់ផ្តើមជាមួយ DM Store"),
+        "onboard_txt1_desp": MessageLookupByLibrary.simpleMessage(
+            "ឆ្លាតវ៉ៃ , ការប្រមូលផ្តុំម៉ូតស្អាតៗ និងទាន់សម័យ រុករកឥឡូវនេះ"),
+        "onboard_txt2": MessageLookupByLibrary.simpleMessage("អ្នកអាចធ្វើបាន"),
+        "onboard_txt2_desp": MessageLookupByLibrary.simpleMessage(
+            "មានម៉ូតស្អាតៗៗជាច្រើននៅក្នុងដៃរបស់អ្នក"),
         "other": MessageLookupByLibrary.simpleMessage("ផ្សេងៗ"),
+        "password": MessageLookupByLibrary.simpleMessage("លេខសម្ងាត់"),
         "popular": MessageLookupByLibrary.simpleMessage("ពេញនិយម"),
         "profile": MessageLookupByLibrary.simpleMessage("ផ្ទាល់ខ្លួន"),
+        "recovery_password":
+            MessageLookupByLibrary.simpleMessage("សង្គ្រោះពាក្យសម្ងាត់"),
+        "register_account":
+            MessageLookupByLibrary.simpleMessage("ស្នើចុះឈ្នោះ"),
         "seeall": MessageLookupByLibrary.simpleMessage("បង្ហាញទាំងអស់"),
         "selectCategory":
             MessageLookupByLibrary.simpleMessage("ជ្រើសរើសប្រភេទ"),
+        "setting": MessageLookupByLibrary.simpleMessage("ការកំណត់"),
+        "sign_in": MessageLookupByLibrary.simpleMessage("ចុះឈ្មោះ"),
+        "sign_in_google":
+            MessageLookupByLibrary.simpleMessage("ចុះឈ្មោះជាមួយ google"),
         "skip": MessageLookupByLibrary.simpleMessage("រំលង"),
         "welcometodmstore":
             MessageLookupByLibrary.simpleMessage("ស្វាគមន៍មកកាន់ ឌី អឹម ស្តរ"),
-        "women": MessageLookupByLibrary.simpleMessage("ស្រ្តី")
+        "women": MessageLookupByLibrary.simpleMessage("ស្រ្តី"),
+        "your_name": MessageLookupByLibrary.simpleMessage("ឈ្មោះរបស់អ្នក")
       };
 }

@@ -17,28 +17,28 @@ final shellRoute = ShellRoute(
       parentNavigatorKey: shellNavigatorKey,
       path: Routes.HOME_SCREEN,
       pageBuilder: (context, state) {
-        return const NoTransitionPage(child: HomeScreen());
+        return const NoTransitionPage(
+          child: HomeScreen(),
+        );
       },
     ),
     GoRoute(
       parentNavigatorKey: shellNavigatorKey,
       path: Routes.FAVORITE_SCREEN,
       pageBuilder: (context, state) {
-        return const NoTransitionPage(child: FavoriteScreen());
+        return const NoTransitionPage(
+          child: FavoriteScreen(),
+        );
       },
     ),
     GoRoute(
       parentNavigatorKey: shellNavigatorKey,
       path: Routes.NOTIFICATION_SCREEN,
       pageBuilder: (context, state) {
-        return const NoTransitionPage(child: NotificationScreen());
+        return const NoTransitionPage(
+          child: NotificationScreen(),
+        );
       },
     ),
-    GoRoute(
-        parentNavigatorKey: shellNavigatorKey,
-        path: Routes.PROFILE_SCREEN,
-        pageBuilder: (context, state) {
-          return const NoTransitionPage(child: HomeScreen());
-        }),
   ],
 );

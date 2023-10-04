@@ -239,6 +239,246 @@ class S {
       args: [],
     );
   }
+
+  /// `Choose Language`
+  String get chooselanguage {
+    return Intl.message(
+      'Choose Language',
+      name: 'chooselanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Khmer`
+  String get khmer {
+    return Intl.message(
+      'Khmer',
+      name: 'khmer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English`
+  String get english {
+    return Intl.message(
+      'English',
+      name: 'english',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hello Again`
+  String get hello_again {
+    return Intl.message(
+      'Hello Again',
+      name: 'hello_again',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fill your details or continue with social media`
+  String get fill_your_detail {
+    return Intl.message(
+      'Fill your details or continue with social media',
+      name: 'fill_your_detail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email Address`
+  String get email_address {
+    return Intl.message(
+      'Email Address',
+      name: 'email_address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Recovery Password`
+  String get recovery_password {
+    return Intl.message(
+      'Recovery Password',
+      name: 'recovery_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign In`
+  String get sign_in {
+    return Intl.message(
+      'Sign In',
+      name: 'sign_in',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign In With Google`
+  String get sign_in_google {
+    return Intl.message(
+      'Sign In With Google',
+      name: 'sign_in_google',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New User`
+  String get new_user {
+    return Intl.message(
+      'New User',
+      name: 'new_user',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create Account`
+  String get create_account {
+    return Intl.message(
+      'Create Account',
+      name: 'create_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Regiser Account`
+  String get register_account {
+    return Intl.message(
+      'Regiser Account',
+      name: 'register_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your Name`
+  String get your_name {
+    return Intl.message(
+      'Your Name',
+      name: 'your_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already Have Account`
+  String get already_have_account {
+    return Intl.message(
+      'Already Have Account',
+      name: 'already_have_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log In`
+  String get log_in {
+    return Intl.message(
+      'Log In',
+      name: 'log_in',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Let's Start With DM Store`
+  String get onboard_txt1 {
+    return Intl.message(
+      'Let`s Start With DM Store',
+      name: 'onboard_txt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Smart , Gorgeous & Fashionable Collection Explor Now`
+  String get onboard_txt1_desp {
+    return Intl.message(
+      'Smart , Gorgeous & Fashionable Collection Explor Now',
+      name: 'onboard_txt1_desp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You Have the Power To`
+  String get onboard_txt2 {
+    return Intl.message(
+      'You Have the Power To',
+      name: 'onboard_txt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lots of beautiful Model in your hand`
+  String get onboard_txt2_desp {
+    return Intl.message(
+      'Lots of beautiful Model in your hand',
+      name: 'onboard_txt2_desp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Setting`
+  String get setting {
+    return Intl.message(
+      'Setting',
+      name: 'setting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Language`
+  String get language {
+    return Intl.message(
+      'Language',
+      name: 'language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dark MOde`
+  String get dark_mode {
+    return Intl.message(
+      'Dark MOde',
+      name: 'dark_mode',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

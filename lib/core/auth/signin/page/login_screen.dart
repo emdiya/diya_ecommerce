@@ -3,6 +3,7 @@ import 'package:diya_ecomerce/constant/app_colors.dart';
 import 'package:diya_ecomerce/core/auth/signin/controller/auth_controller.dart';
 import 'package:diya_ecomerce/gen/assets.gen.dart';
 import 'package:diya_ecomerce/gen/fonts.gen.dart';
+import 'package:diya_ecomerce/utils/controller/gloabal_controller.dart';
 import 'package:diya_ecomerce/utils/widget/custom_button_circle.dart';
 import 'package:diya_ecomerce/utils/widget/custom_click_button.dart';
 import 'package:diya_ecomerce/utils/widget/custom_textformfield.dart';
@@ -10,6 +11,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../../generated/l10n.dart';
 
 class LogInScreen extends StatelessWidget {
   const LogInScreen({super.key});
@@ -50,20 +53,23 @@ class LogInScreen extends StatelessWidget {
                       child: Column(
                         children: [
                           Text(
-                            'Hello Again!',
+                            S.current.hello_again,
                             style: Theme.of(context)
                                 .textTheme
                                 .headlineLarge
                                 ?.copyWith(
-                                  fontFamily: FontFamily.ralewayBold,
+                                  fontFamily: App.isEnglish
+                                      ? FontFamily.ralewayBold
+                                      : FontFamily.kantumruyPro,
                                   color: AppColor.textBlackLight,
                                 ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left: 60, right: 60),
+                            padding: const EdgeInsets.only(
+                                left: 60, right: 60, top: 10),
                             child: Text(
                               textAlign: TextAlign.center,
-                              'Fill your details or continue with social media',
+                              S.current.fill_your_detail,
                               style: Theme.of(context)
                                   .textTheme
                                   .labelMedium
@@ -71,6 +77,9 @@ class LogInScreen extends StatelessWidget {
                                     fontSize: 16,
                                     fontWeight: FontWeight.w400,
                                     color: AppColor.textGrey1,
+                                    fontFamily: App.isEnglish
+                                        ? FontFamily.poppinsRegular
+                                        : FontFamily.kantumruyPro,
                                   ),
                               overflow: TextOverflow.clip,
                             ),
@@ -80,10 +89,12 @@ class LogInScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 30),
                     Text(
-                      'Email Address',
+                      S.current.email_address,
                       style: Theme.of(context).textTheme.labelMedium?.copyWith(
                             fontSize: 16,
-                            fontFamily: FontFamily.ralewayRegular,
+                            fontFamily: App.isEnglish
+                                ? FontFamily.ralewayRegular
+                                : FontFamily.kantumruyPro,
                             fontWeight: FontWeight.w500,
                             color: AppColor.textBlackLight,
                           ),
@@ -91,7 +102,7 @@ class LogInScreen extends StatelessWidget {
                     const SizedBox(height: 12),
                     CustomTextFormField(
                       controller: authControler.emailtxt.value,
-                      hintext: 'Email',
+                      hintext: S.current.email,
                       isPassword: false,
                       onChangeds: (value) {
                         value = authControler.emailtxt.value.text;
@@ -102,7 +113,7 @@ class LogInScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 30),
                     Text(
-                      'Password',
+                      S.current.password,
                       style: Theme.of(context).textTheme.labelMedium?.copyWith(
                             fontSize: 16,
                             fontFamily: FontFamily.ralewayRegular,
@@ -113,7 +124,7 @@ class LogInScreen extends StatelessWidget {
                     const SizedBox(height: 12),
                     CustomTextFormField(
                       obscureText: true,
-                      hintext: 'Password',
+                      hintext: S.current.password,
                       controller: authControler.passwordtxt.value,
                       isPassword: true,
                       onChangeds: (value) {
@@ -125,7 +136,7 @@ class LogInScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Text(
-                          'Recovery Password',
+                          S.current.recovery_password,
                           overflow: TextOverflow.clip,
                           style:
                               Theme.of(context).textTheme.labelMedium?.copyWith(
@@ -139,22 +150,35 @@ class LogInScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 24),
                     CustomClickButton(
-                      onTap: () {
+                      onTap: () async {
                         if (authControler.emailtxt.value.text ==
                                 authControler.email.value &&
                             authControler.passwordtxt.value.text ==
                                 authControler.password.value) {
-                          context.go(Routes.HOME_SCREEN);
+                          authControler.isLoading.value
+                              ? const CircularProgressIndicator()
+                              :
+                              // Future.delayed(
+                              //   const Duration(microseconds: 12000),
+                              //   () {
+                              //     // const LoadingScreen(
+                              //     //   isTransparent: true,
+                              //     // );
+
+                              //   },
+                              // );
+
+                              context.go(Routes.HOME_SCREEN);
                         } else {}
                       },
-                      title: 'Sign In',
+                      title: S.current.sign_in,
                     ),
                     const SizedBox(height: 24),
                     CustomClickButton(
                       imgUrl: Assets.svg.googleIcon.path,
                       color: AppColor.textGrey6,
                       colortxt: AppColor.textBlackLight,
-                      title: 'Sign In With Google',
+                      title: S.current.sign_in_google,
                     ),
                   ],
                 ),
@@ -167,10 +191,12 @@ class LogInScreen extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               child: Text.rich(
                 TextSpan(
-                  text: 'New User? ',
+                  text: '${S.current.new_user}? ',
                   style: Theme.of(context).textTheme.labelMedium?.copyWith(
                         fontSize: 16,
-                        fontFamily: FontFamily.ralewayRegular,
+                        fontFamily: App.isEnglish
+                            ? FontFamily.ralewayRegular
+                            : FontFamily.kantumruyPro,
                         fontWeight: FontWeight.w500,
                         color: AppColor.textGrey2,
                       ),
@@ -182,9 +208,11 @@ class LogInScreen extends StatelessWidget {
                           context.push(
                               Routes.LOGIN_SCREEN + Routes.REGISTER_SCREEN);
                         },
-                      text: 'Create Account',
+                      text: S.current.create_account,
                       style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                            fontFamily: FontFamily.ralewayRegular,
+                            fontFamily: App.isEnglish
+                                ? FontFamily.ralewayRegular
+                                : FontFamily.kantumruyPro,
                             fontSize: 16,
                             color: AppColor.textMediumBlack,
                           ),
