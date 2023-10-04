@@ -332,6 +332,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Lots of beautiful Model in your hand'**
   String get onboard_txt2_desp;
+
+  /// No description provided for @setting.
+  ///
+  /// In en, this message translates to:
+  /// **'Setting'**
+  String get setting;
+
+  /// No description provided for @language.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get language;
+
+  /// No description provided for @dark_mode.
+  ///
+  /// In en, this message translates to:
+  /// **'Dark MOde'**
+  String get dark_mode;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

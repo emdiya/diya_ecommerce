@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
+import '../../../config/theme/theme_controller.dart';
 import '../widget/custom_profilemenu.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -16,19 +17,21 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-  IconData _currentIcon = LineAwesomeIcons.sun; // Initial icon
-
-  void _changeIcon() {
-    setState(() {
-      // Toggle between icons
-      _currentIcon = _currentIcon == LineAwesomeIcons.sun
-          ? LineAwesomeIcons.moon
-          : LineAwesomeIcons.sun;
-    });
-  }
+  // IconData _currentIcon = LineAwesomeIcons.sun; // Initial icon
+  // bool isDarkMode = false;
+  // void _changeIcon() {
+  //   setState(() {
+  //     _currentIcon = _currentIcon == LineAwesomeIcons.sun
+  //         ? LineAwesomeIcons.moon
+  //         : LineAwesomeIcons.sun;
+  //   });
+  //   isDarkMode = !isDarkMode;
+  //   Get.changeThemeMode(isDarkMode ? ThemeMode.dark : ThemeMode.light);
+  // }
 
   @override
   Widget build(BuildContext context) {
+    final auth = Get.put(ThemeController());
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -44,8 +47,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
         actions: [
           IconButton(
-            icon: Icon(_currentIcon),
-            onPressed: _changeIcon,
+            // icon: Icon(_currentIcon),
+            // onPressed: _changeIcon(),
+            icon: auth.isDarkMode
+                ? const Icon(LineAwesomeIcons.moon)
+                : const Icon(LineAwesomeIcons.sun),
+            onPressed: () => auth.changeTheme(),
             color: AppColor.primaryColor,
             iconSize: 24.0,
           )

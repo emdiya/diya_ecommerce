@@ -29,6 +29,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Choose Language"),
         "create_account":
             MessageLookupByLibrary.simpleMessage("Create Account"),
+        "dark_mode": MessageLookupByLibrary.simpleMessage("Dark MOde"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "email_address": MessageLookupByLibrary.simpleMessage("Email Address"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
@@ -40,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "khmer": MessageLookupByLibrary.simpleMessage("Khmer"),
         "kid": MessageLookupByLibrary.simpleMessage("Kid"),
+        "language": MessageLookupByLibrary.simpleMessage("Language"),
         "log_in": MessageLookupByLibrary.simpleMessage("Log In"),
         "lookingForShoe":
             MessageLookupByLibrary.simpleMessage("looking for Shoe"),
@@ -68,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "seeall": MessageLookupByLibrary.simpleMessage("See All"),
         "selectCategory":
             MessageLookupByLibrary.simpleMessage("Select Category"),
+        "setting": MessageLookupByLibrary.simpleMessage("Setting"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign In"),
         "sign_in_google":
             MessageLookupByLibrary.simpleMessage("Sign In With Google"),

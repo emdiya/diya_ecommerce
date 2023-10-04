@@ -123,4 +123,13 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get onboard_txt2_desp => 'មានម៉ូតស្អាតៗៗជាច្រើននៅក្នុងដៃរបស់អ្នក';
+
+  @override
+  String get setting => 'ការកំណត់';
+
+  @override
+  String get language => 'ភាសា';
+
+  @override
+  String get dark_mode => 'ផ្ទៃងងឹត';
 }

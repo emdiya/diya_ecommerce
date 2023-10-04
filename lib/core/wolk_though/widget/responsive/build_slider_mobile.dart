@@ -54,63 +54,64 @@ class BuildSliderMobile extends StatelessWidget {
                     child: GestureDetector(
                       onTap: () {
                         onShowBottomSheetsLanguage(
-                            context: context,
-                            colors: Colors.transparent,
-                            height: 220,
-                            appbar: true,
-                            child: Column(
-                              children: [
-                                const CustomHeaderIOS(),
-                                Container(
-                                  height: 40,
-                                  padding:
-                                      const EdgeInsets.only(left: 20, top: 10),
-                                  margin: const EdgeInsets.only(bottom: 10),
-                                  width: double.infinity,
-                                  child: Text(
-                                    S.current.chooselanguage,
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .titleLarge!
-                                        .copyWith(
-                                          fontSize: 20,
-                                          fontFamily: App.isEnglish
-                                              ? FontFamily.poppinsBold
-                                              : FontFamily.kantumruyPro,
-                                        ),
-                                  ),
+                          context: context,
+                          colors: Colors.transparent,
+                          height: 220,
+                          appbar: true,
+                          child: Column(
+                            children: [
+                              const CustomHeaderIOS(),
+                              Container(
+                                height: 40,
+                                padding:
+                                    const EdgeInsets.only(left: 20, top: 10),
+                                margin: const EdgeInsets.only(bottom: 10),
+                                width: double.infinity,
+                                child: Text(
+                                  S.current.chooselanguage,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .titleLarge!
+                                      .copyWith(
+                                        fontSize: 20,
+                                        fontFamily: App.isEnglish
+                                            ? FontFamily.poppinsBold
+                                            : FontFamily.kantumruyPro,
+                                      ),
                                 ),
-                                const Divider(
-                                  thickness: 1,
-                                  height: 1,
-                                  color: Color(0xffDDDDDD),
-                                ),
-                                CustomCardLanguage(
-                                  language: S.current.khmer,
-                                  select: Get.locale!.languageCode ==
-                                      Languages.khmer.code,
-                                  imageUrl: 'assets/svg/khmer_flag.svg',
-                                  ontap: () {
-                                    Get.put(App())
-                                        .changeLanguage(Languages.khmer);
+                              ),
+                              const Divider(
+                                thickness: 1,
+                                height: 1,
+                                color: Color(0xffDDDDDD),
+                              ),
+                              CustomCardLanguage(
+                                language: S.current.khmer,
+                                select: Get.locale!.languageCode ==
+                                    Languages.khmer.code,
+                                imageUrl: 'assets/svg/khmer_flag.svg',
+                                ontap: () {
+                                  Get.put(App())
+                                      .changeLanguage(Languages.khmer);
 
-                                    Navigator.pop(context);
-                                  },
-                                ),
-                                CustomCardLanguage(
-                                  language: S.current.english,
-                                  select: Get.locale!.languageCode ==
-                                      Languages.english.code,
-                                  imageUrl: 'assets/svg/en_flag.svg',
-                                  ontap: () {
-                                    Get.put(App())
-                                        .changeLanguage(Languages.english);
+                                  Navigator.pop(context);
+                                },
+                              ),
+                              CustomCardLanguage(
+                                language: S.current.english,
+                                select: Get.locale!.languageCode ==
+                                    Languages.english.code,
+                                imageUrl: 'assets/svg/en_flag.svg',
+                                ontap: () {
+                                  Get.put(App())
+                                      .changeLanguage(Languages.english);
 
-                                    Navigator.pop(context);
-                                  },
-                                ),
-                              ],
-                            ));
+                                  Navigator.pop(context);
+                                },
+                              ),
+                            ],
+                          ),
+                        );
                       },
                       child: Container(
                         height: 31,

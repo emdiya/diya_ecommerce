@@ -39,5 +39,8 @@
     "onboard_txt1": "Let`s Start With DM Store",
     "onboard_txt1_desp":"Smart , Gorgeous & Fashionable Collection Explor Now",
     "onboard_txt2": "You Have the Power To",
-    "onboard_txt2_desp":"Lots of beautiful Model in your hand"
+    "onboard_txt2_desp":"Lots of beautiful Model in your hand",
+    "setting":"Setting",
+    "language":"Language",
+    "dark_mode":"Dark MOde"
 }

@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("មានគណនីរួចហើយ"),
         "chooselanguage": MessageLookupByLibrary.simpleMessage("ជ្រើសរើសភាសា"),
         "create_account": MessageLookupByLibrary.simpleMessage("បង្កើតគណនី"),
+        "dark_mode": MessageLookupByLibrary.simpleMessage("ផ្ទៃងងឹត"),
         "email": MessageLookupByLibrary.simpleMessage("អ៊ីម៉ែល"),
         "email_address":
             MessageLookupByLibrary.simpleMessage("អាសយដ្ឋាន អ៊ីម៉ែល"),
@@ -39,6 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("ទំព័រដើម"),
         "khmer": MessageLookupByLibrary.simpleMessage("ភាសាខ្មែរ"),
         "kid": MessageLookupByLibrary.simpleMessage("ក្មេង"),
+        "language": MessageLookupByLibrary.simpleMessage("ភាសា"),
         "log_in": MessageLookupByLibrary.simpleMessage("ចូលគណនី"),
         "lookingForShoe": MessageLookupByLibrary.simpleMessage("ស្វែងរក"),
         "men": MessageLookupByLibrary.simpleMessage("បុរស"),
@@ -65,6 +67,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "seeall": MessageLookupByLibrary.simpleMessage("បង្ហាញទាំងអស់"),
         "selectCategory":
             MessageLookupByLibrary.simpleMessage("ជ្រើសរើសប្រភេទ"),
+        "setting": MessageLookupByLibrary.simpleMessage("ការកំណត់"),
         "sign_in": MessageLookupByLibrary.simpleMessage("ចុះឈ្មោះ"),
         "sign_in_google":
             MessageLookupByLibrary.simpleMessage("ចុះឈ្មោះជាមួយ google"),

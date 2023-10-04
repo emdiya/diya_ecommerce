@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final globalControll = Get.put(App());
+    // Get.put(ThemeController());
     return GestureDetector(
       onTap: () => unFocus(context),
       child: GetMaterialApp.router(
@@ -29,9 +30,13 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Diya E-Comerce',
         theme: ThemeData(
-          useMaterial3: true,
-          // appBarTheme: const AppBarTheme(color: Colors.transparent),
-        ),
+            useMaterial3: true,
+            appBarTheme: const AppBarTheme(
+              centerTitle: true,
+              backgroundColor: Colors.transparent,
+            )
+            // appBarTheme: const AppBarTheme(color: Colors.transparent),
+            ),
         //   theme: ThemeBase.theme(),
         themeMode: ThemeMode.system,
         darkTheme: ThemeBase.darkTheme(),

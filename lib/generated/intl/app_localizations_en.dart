@@ -123,4 +123,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get onboard_txt2_desp => 'Lots of beautiful Model in your hand';
+
+  @override
+  String get setting => 'Setting';
+
+  @override
+  String get language => 'Language';
+
+  @override
+  String get dark_mode => 'Dark MOde';
 }
