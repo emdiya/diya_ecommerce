@@ -348,8 +348,50 @@ abstract class AppLocalizations {
   /// No description provided for @dark_mode.
   ///
   /// In en, this message translates to:
-  /// **'Dark MOde'**
+  /// **'Dark Mode'**
   String get dark_mode;
+
+  /// No description provided for @edit.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit'**
+  String get edit;
+
+  /// No description provided for @account_information.
+  ///
+  /// In en, this message translates to:
+  /// **'Account Information'**
+  String get account_information;
+
+  /// No description provided for @important_news.
+  ///
+  /// In en, this message translates to:
+  /// **'Important News'**
+  String get important_news;
+
+  /// No description provided for @log_out.
+  ///
+  /// In en, this message translates to:
+  /// **'Log Out'**
+  String get log_out;
+
+  /// No description provided for @privacy.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy'**
+  String get privacy;
+
+  /// No description provided for @edit_profile.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Profile'**
+  String get edit_profile;
+
+  /// No description provided for @setting_security.
+  ///
+  /// In en, this message translates to:
+  /// **'Setting & Security'**
+  String get setting_security;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

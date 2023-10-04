@@ -1,8 +1,13 @@
+import 'package:diya_ecomerce/config/go_route/app_routes.dart';
+import 'package:diya_ecomerce/constant/app_colors.dart';
 import 'package:diya_ecomerce/module/profile/controller/profile_controller.dart';
 import 'package:diya_ecomerce/utils/helper/extension/general_extension.dart';
+import 'package:diya_ecomerce/utils/widget/custom_setting_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
+import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
 import '../../../gen/fonts.gen.dart';
 import '../../../generated/l10n.dart';
@@ -22,15 +27,104 @@ class _SettingScreenState extends State<SettingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
-        title: Text(S.current.setting),
+        backgroundColor: AppColor.textWhite,
+        title: Text(S.current.setting_security),
         centerTitle: true,
       ),
       body: Obx(
         () => Padding(
           padding: const EdgeInsets.only(left: 20.0, right: 20, top: 20),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const Text(
+                "កំណត់គណនី",
+                style: TextStyle(fontWeight: FontWeight.w800, fontSize: 14),
+              ),
+              const SizedBox(height: 10),
+              SizedBox(
+                height: 40,
+                child: CustomCardSetting(
+                  list: settingAccountList,
+                  onTap: () {
+                    context.go(Routes.PROFILE_SCREEN + Routes.ACCOUNT_INFO);
+                  },
+                ),
+              ),
+              const SizedBox(height: 10),
+              const Text(
+                "ប្រព័ន្ធ និងសុវត្ថិភាព",
+                style: TextStyle(fontWeight: FontWeight.w800, fontSize: 14),
+              ),
+              const SizedBox(height: 10),
+              SizedBox(
+                height: 115,
+                child: CustomCardSetting(
+                  list: systemandsecurity,
+                  onTap: () {
+                    onShowBottomSheetsLanguage(
+                      context: context,
+                      colors: Colors.transparent,
+                      height: 220,
+                      appbar: true,
+                      child: Column(
+                        children: [
+                          const CustomHeaderIOS(),
+                          Container(
+                            height: 40,
+                            padding: const EdgeInsets.only(left: 20, top: 10),
+                            margin: const EdgeInsets.only(bottom: 10),
+                            width: double.infinity,
+                            child: Text(
+                              S.current.chooselanguage,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleLarge!
+                                  .copyWith(
+                                    fontSize: 20,
+                                    fontFamily: App.isEnglish
+                                        ? FontFamily.poppinsBold
+                                        : FontFamily.kantumruyPro,
+                                  ),
+                            ),
+                          ),
+                          const Divider(
+                            thickness: 1,
+                            height: 1,
+                            color: Color(0xffDDDDDD),
+                          ),
+                          CustomCardLanguage(
+                            language: S.current.khmer,
+                            select: Get.locale!.languageCode ==
+                                Languages.khmer.code,
+                            imageUrl: 'assets/svg/khmer_flag.svg',
+                            ontap: () {
+                              Get.put(App()).changeLanguage(Languages.khmer);
+
+                              Navigator.pop(context);
+                            },
+                          ),
+                          CustomCardLanguage(
+                            language: S.current.english,
+                            select: Get.locale!.languageCode ==
+                                Languages.english.code,
+                            imageUrl: 'assets/svg/en_flag.svg',
+                            ontap: () {
+                              Get.put(App()).changeLanguage(Languages.english);
+
+                              Navigator.pop(context);
+                            },
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

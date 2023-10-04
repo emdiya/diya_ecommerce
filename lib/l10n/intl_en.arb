@@ -42,5 +42,13 @@
     "onboard_txt2_desp":"Lots of beautiful Model in your hand",
     "setting":"Setting",
     "language":"Language",
-    "dark_mode":"Dark MOde"
+    "dark_mode":"Dark Mode",
+    "edit":"Edit",
+    "account_information":"Account Information",
+    "important_news":"Important News",
+    "log_out":"Log Out",
+    "privacy":"Privacy",
+    "edit_profile":"Edit Profile",
+    "setting_security":"Setting & Security"
+  
 }

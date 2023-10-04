@@ -132,4 +132,25 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get dark_mode => 'ផ្ទៃងងឹត';
+
+  @override
+  String get edit => 'កែប្រែ';
+
+  @override
+  String get account_information => 'ព័ត៌មានគណនី';
+
+  @override
+  String get important_news => 'ដំណឹងសំខាន់';
+
+  @override
+  String get log_out => 'ចាកចេញ';
+
+  @override
+  String get privacy => 'ឯកជនភាព';
+
+  @override
+  String get edit_profile => 'កែប្រែព័ត៌មានផ្ទាល់ខ្លួន';
+
+  @override
+  String get setting_security => 'ការកំណត់ និង សុវត្ថិភាព';
 }

@@ -131,5 +131,26 @@ class AppLocalizationsEn extends AppLocalizations {
   String get language => 'Language';
 
   @override
-  String get dark_mode => 'Dark MOde';
+  String get dark_mode => 'Dark Mode';
+
+  @override
+  String get edit => 'Edit';
+
+  @override
+  String get account_information => 'Account Information';
+
+  @override
+  String get important_news => 'Important News';
+
+  @override
+  String get log_out => 'Log Out';
+
+  @override
+  String get privacy => 'Privacy';
+
+  @override
+  String get edit_profile => 'Edit Profile';
+
+  @override
+  String get setting_security => 'Setting & Security';
 }

@@ -22,12 +22,17 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "account_information":
+            MessageLookupByLibrary.simpleMessage("ព័ត៌មានគណនី"),
         "all": MessageLookupByLibrary.simpleMessage("ទាំងអស់"),
         "already_have_account":
             MessageLookupByLibrary.simpleMessage("មានគណនីរួចហើយ"),
         "chooselanguage": MessageLookupByLibrary.simpleMessage("ជ្រើសរើសភាសា"),
         "create_account": MessageLookupByLibrary.simpleMessage("បង្កើតគណនី"),
         "dark_mode": MessageLookupByLibrary.simpleMessage("ផ្ទៃងងឹត"),
+        "edit": MessageLookupByLibrary.simpleMessage("កែប្រែ"),
+        "edit_profile":
+            MessageLookupByLibrary.simpleMessage("កែប្រែព័ត៌មានផ្ទាល់ខ្លួន"),
         "email": MessageLookupByLibrary.simpleMessage("អ៊ីម៉ែល"),
         "email_address":
             MessageLookupByLibrary.simpleMessage("អាសយដ្ឋាន អ៊ីម៉ែល"),
@@ -38,10 +43,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "getstart": MessageLookupByLibrary.simpleMessage("ចាប់ផ្តើម"),
         "hello_again": MessageLookupByLibrary.simpleMessage("ស្វាគមន៍ម្តងទៀត"),
         "home": MessageLookupByLibrary.simpleMessage("ទំព័រដើម"),
+        "important_news": MessageLookupByLibrary.simpleMessage("ដំណឹងសំខាន់"),
         "khmer": MessageLookupByLibrary.simpleMessage("ភាសាខ្មែរ"),
         "kid": MessageLookupByLibrary.simpleMessage("ក្មេង"),
         "language": MessageLookupByLibrary.simpleMessage("ភាសា"),
         "log_in": MessageLookupByLibrary.simpleMessage("ចូលគណនី"),
+        "log_out": MessageLookupByLibrary.simpleMessage("ចាកចេញ"),
         "lookingForShoe": MessageLookupByLibrary.simpleMessage("ស្វែងរក"),
         "men": MessageLookupByLibrary.simpleMessage("បុរស"),
         "new_user": MessageLookupByLibrary.simpleMessage("អ្នកប្រើថ្មី"),
@@ -59,6 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "other": MessageLookupByLibrary.simpleMessage("ផ្សេងៗ"),
         "password": MessageLookupByLibrary.simpleMessage("លេខសម្ងាត់"),
         "popular": MessageLookupByLibrary.simpleMessage("ពេញនិយម"),
+        "privacy": MessageLookupByLibrary.simpleMessage("ឯកជនភាព"),
         "profile": MessageLookupByLibrary.simpleMessage("ផ្ទាល់ខ្លួន"),
         "recovery_password":
             MessageLookupByLibrary.simpleMessage("សង្គ្រោះពាក្យសម្ងាត់"),
@@ -68,6 +76,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "selectCategory":
             MessageLookupByLibrary.simpleMessage("ជ្រើសរើសប្រភេទ"),
         "setting": MessageLookupByLibrary.simpleMessage("ការកំណត់"),
+        "setting_security":
+            MessageLookupByLibrary.simpleMessage("ការកំណត់ និង សុវត្ថិភាព"),
         "sign_in": MessageLookupByLibrary.simpleMessage("ចុះឈ្មោះ"),
         "sign_in_google":
             MessageLookupByLibrary.simpleMessage("ចុះឈ្មោះជាមួយ google"),

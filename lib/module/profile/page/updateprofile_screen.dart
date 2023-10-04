@@ -1,6 +1,7 @@
 import 'package:diya_ecomerce/config/go_route/app_routes.dart';
 import 'package:diya_ecomerce/constant/app_colors.dart';
 import 'package:diya_ecomerce/gen/fonts.gen.dart';
+import 'package:diya_ecomerce/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
@@ -19,7 +20,7 @@ class UpdateProfileScreen extends StatelessWidget {
             onPressed: () => context.go(Routes.PROFILE_SCREEN),
             icon: const Icon(LineAwesomeIcons.angle_left)),
         title: Text(
-          "EditProfile",
+          S.current.edit_profile,
           style: Theme.of(context).textTheme.titleLarge?.copyWith(
                 fontFamily: FontFamily.ralewaySemiBold,
               ),

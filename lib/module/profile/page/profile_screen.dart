@@ -1,6 +1,7 @@
 import 'package:diya_ecomerce/config/go_route/app_routes.dart';
 import 'package:diya_ecomerce/constant/app_colors.dart';
 import 'package:diya_ecomerce/gen/fonts.gen.dart';
+import 'package:diya_ecomerce/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
@@ -17,18 +18,6 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-  // IconData _currentIcon = LineAwesomeIcons.sun; // Initial icon
-  // bool isDarkMode = false;
-  // void _changeIcon() {
-  //   setState(() {
-  //     _currentIcon = _currentIcon == LineAwesomeIcons.sun
-  //         ? LineAwesomeIcons.moon
-  //         : LineAwesomeIcons.sun;
-  //   });
-  //   isDarkMode = !isDarkMode;
-  //   Get.changeThemeMode(isDarkMode ? ThemeMode.dark : ThemeMode.light);
-  // }
-
   @override
   Widget build(BuildContext context) {
     final auth = Get.put(ThemeController());
@@ -40,9 +29,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
           icon: const Icon(LineAwesomeIcons.angle_left),
         ),
         title: Text(
-          "Profile",
+          S.current.profile,
           style: Theme.of(context).textTheme.titleLarge?.copyWith(
                 fontFamily: FontFamily.ralewaySemiBold,
+                fontSize: 18,
               ),
         ),
         actions: [
@@ -96,8 +86,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ],
               ),
               const SizedBox(height: 10),
-              Text("Em Diya",
-                  style: Theme.of(context).textTheme.headlineMedium),
+              Text(
+                "Em Diya",
+                style: Theme.of(context)
+                    .textTheme
+                    .titleLarge
+                    ?.copyWith(fontSize: 18, fontWeight: FontWeight.w600),
+              ),
               Text("diya@admin.com",
                   style: Theme.of(context).textTheme.bodyMedium),
               const SizedBox(height: 20),
@@ -114,7 +109,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       side: BorderSide.none,
                       shape: const StadiumBorder()),
                   child: Text(
-                    "Edit",
+                    S.current.edit,
                     style: TextStyle(color: AppColor.textWhite),
                   ),
                 ),
@@ -124,7 +119,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               const SizedBox(height: 10),
               //! -- MENU
               ProfileMenuWidget(
-                title: "Settings",
+                title: S.current.setting,
                 icon: LineAwesomeIcons.cog,
                 onPress: () {
                   debugPrint("----------> is click Setting");
@@ -132,30 +127,31 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 },
               ),
               ProfileMenuWidget(
-                title: "Billing Details",
-                icon: LineAwesomeIcons.wallet,
+                title: S.current.privacy,
+                icon: LineAwesomeIcons.alternate_shield,
                 onPress: () {
                   debugPrint("----------> is click Setting");
                 },
               ),
               ProfileMenuWidget(
-                title: "User Management",
+                title: S.current.account_information,
                 icon: LineAwesomeIcons.user_check,
                 onPress: () {
                   debugPrint("----------> is click Setting");
+                  context.go(Routes.PROFILE_SCREEN + Routes.ACCOUNT_INFO);
                 },
               ),
               const Divider(),
               const SizedBox(height: 10),
               ProfileMenuWidget(
-                title: "Information",
+                title: S.current.important_news,
                 icon: LineAwesomeIcons.info,
                 onPress: () {
                   debugPrint("----------> is click Setting");
                 },
               ),
               ProfileMenuWidget(
-                  title: "Logout",
+                  title: S.current.log_out,
                   icon: LineAwesomeIcons.alternate_sign_out,
                   textColor: Colors.red,
                   endIcon: false,

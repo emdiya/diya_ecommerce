@@ -1,6 +1,8 @@
+import 'package:diya_ecomerce/module/profile/model/setting/setting_account/setting_account_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:injectable/injectable.dart';
+import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
 import '../../../../main.dart';
 
@@ -31,3 +33,25 @@ enum VisualMode {
   dark,
   light,
 }
+
+final settingAccountList = [
+  SettingAccountModel(
+    label: "ព័ត៌មានគណនី",
+    iconData: LineAwesomeIcons.user_check,
+  ),
+];
+
+final systemandsecurity = [
+  SettingAccountModel(
+    label: "ផ្ទៃងងឹត",
+    iconData: LineAwesomeIcons.moon,
+  ),
+  SettingAccountModel(
+    label: "ភាសា",
+    iconData: LineAwesomeIcons.language,
+  ),
+  SettingAccountModel(
+    label: "ចាកចេញ",
+    iconData: Icons.exit_to_app,
+  ),
+];

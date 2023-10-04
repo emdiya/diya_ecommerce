@@ -470,11 +470,81 @@ class S {
     );
   }
 
-  /// `Dark MOde`
+  /// `Dark Mode`
   String get dark_mode {
     return Intl.message(
-      'Dark MOde',
+      'Dark Mode',
       name: 'dark_mode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit`
+  String get edit {
+    return Intl.message(
+      'Edit',
+      name: 'edit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Account Information`
+  String get account_information {
+    return Intl.message(
+      'Account Information',
+      name: 'account_information',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Important News`
+  String get important_news {
+    return Intl.message(
+      'Important News',
+      name: 'important_news',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log Out`
+  String get log_out {
+    return Intl.message(
+      'Log Out',
+      name: 'log_out',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Privacy`
+  String get privacy {
+    return Intl.message(
+      'Privacy',
+      name: 'privacy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit Profile`
+  String get edit_profile {
+    return Intl.message(
+      'Edit Profile',
+      name: 'edit_profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Setting & Security`
+  String get setting_security {
+    return Intl.message(
+      'Setting & Security',
+      name: 'setting_security',
       desc: '',
       args: [],
     );

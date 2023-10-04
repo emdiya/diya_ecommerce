@@ -61,13 +61,13 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      drawer: SizedBox(
-        width: MediaQuery.of(context).size.width * 1,
-        child: const Drawer(
-          backgroundColor: Color(0xff1483C2),
-          child: CustomItemMenu(),
-        ),
-      ),
+      // drawer: SizedBox(
+      //   width: MediaQuery.of(context).size.width * 1,
+      //   child: const Drawer(
+      //     backgroundColor: Color(0xff1483C2),
+      //     child: CustomItemMenu(),
+      //   ),
+      // ),
       body: const SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Padding(

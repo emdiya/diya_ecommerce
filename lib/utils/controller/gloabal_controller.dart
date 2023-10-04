@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class App extends GetxController {
-  final localLang = 'en'.obs;
+  final localLang = 'kk'.obs;
 
   void changeLanguage(Languages language) {
     Get.updateLocale(Locale(language.code));

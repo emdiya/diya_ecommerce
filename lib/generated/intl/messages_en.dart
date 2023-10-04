@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "account_information":
+            MessageLookupByLibrary.simpleMessage("Account Information"),
         "all": MessageLookupByLibrary.simpleMessage("All Shoes"),
         "already_have_account":
             MessageLookupByLibrary.simpleMessage("Already Have Account"),
@@ -29,7 +31,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Choose Language"),
         "create_account":
             MessageLookupByLibrary.simpleMessage("Create Account"),
-        "dark_mode": MessageLookupByLibrary.simpleMessage("Dark MOde"),
+        "dark_mode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+        "edit": MessageLookupByLibrary.simpleMessage("Edit"),
+        "edit_profile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "email_address": MessageLookupByLibrary.simpleMessage("Email Address"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
@@ -39,10 +43,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "getstart": MessageLookupByLibrary.simpleMessage("Get Start"),
         "hello_again": MessageLookupByLibrary.simpleMessage("Hello Again"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "important_news":
+            MessageLookupByLibrary.simpleMessage("Important News"),
         "khmer": MessageLookupByLibrary.simpleMessage("Khmer"),
         "kid": MessageLookupByLibrary.simpleMessage("Kid"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "log_in": MessageLookupByLibrary.simpleMessage("Log In"),
+        "log_out": MessageLookupByLibrary.simpleMessage("Log Out"),
         "lookingForShoe":
             MessageLookupByLibrary.simpleMessage("looking for Shoe"),
         "men": MessageLookupByLibrary.simpleMessage("Men"),
@@ -62,6 +69,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "other": MessageLookupByLibrary.simpleMessage("Ohter"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "popular": MessageLookupByLibrary.simpleMessage("Popular Shoes"),
+        "privacy": MessageLookupByLibrary.simpleMessage("Privacy"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "recovery_password":
             MessageLookupByLibrary.simpleMessage("Recovery Password"),
@@ -71,6 +79,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "selectCategory":
             MessageLookupByLibrary.simpleMessage("Select Category"),
         "setting": MessageLookupByLibrary.simpleMessage("Setting"),
+        "setting_security":
+            MessageLookupByLibrary.simpleMessage("Setting & Security"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign In"),
         "sign_in_google":
             MessageLookupByLibrary.simpleMessage("Sign In With Google"),

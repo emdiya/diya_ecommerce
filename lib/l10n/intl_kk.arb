@@ -42,6 +42,13 @@
     "onboard_txt2_desp":"មានម៉ូតស្អាតៗៗជាច្រើននៅក្នុងដៃរបស់អ្នក",
     "setting":"ការកំណត់",
     "language":"ភាសា",
-    "dark_mode":"ផ្ទៃងងឹត"
+    "dark_mode":"ផ្ទៃងងឹត",
+    "edit":"កែប្រែ",
+    "account_information":"ព័ត៌មានគណនី",
+    "important_news":"ដំណឹងសំខាន់",
+    "log_out":"ចាកចេញ",
+    "privacy":"ឯកជនភាព",
+    "edit_profile":"កែប្រែព័ត៌មានផ្ទាល់ខ្លួន",
+    "setting_security":"ការកំណត់ និង សុវត្ថិភាព"
   
 }
