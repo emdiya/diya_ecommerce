@@ -12,6 +12,7 @@ abstract class Routes {
   static const UPDATE_SCREEN = Paths.UPDATE_SCREEN;
   static const SETTING_SCREEN = Paths.SETTING_SCREEN;
   static const ACCOUNT_INFO = Paths.ACCOUNT_INFO;
+  static const DARKMODE_SCREEN = Paths.DARKMODE_SCREEN;
 }
 
 abstract class Paths {
@@ -26,4 +27,5 @@ abstract class Paths {
   static const UPDATE_SCREEN = '/update';
   static const SETTING_SCREEN = '/settingapp';
   static const ACCOUNT_INFO = '/accountinfo';
+  static const DARKMODE_SCREEN = '/darkmode';
 }

@@ -15,6 +15,7 @@ extension AppColor on Color {
   static var shadowColor = const Color(0xff0a0b091a);
   static var goldVIPcolor = const Color(0xffCDA053);
   static var deepblue = const Color(0xff0B2F8B);
+  static var bgScaffoldWhite = Colors.grey.shade100;
   //== dark Color===
   static var primaryColorDark = const Color(0xff0B1D31);
   static var textFieldFillColorDark = const Color(0xff2A2A2A);

@@ -27,9 +27,11 @@ class _SettingScreenState extends State<SettingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade100,
+      backgroundColor:
+          context.isDarkMode ? AppColor.primaryColorDark : Colors.grey.shade100,
       appBar: AppBar(
-        backgroundColor: AppColor.textWhite,
+        backgroundColor:
+            context.isDarkMode ? AppColor.primaryColorDark : AppColor.textWhite,
         title: Text(S.current.setting_security),
         centerTitle: true,
       ),
@@ -46,10 +48,11 @@ class _SettingScreenState extends State<SettingScreen> {
               ),
               const SizedBox(height: 10),
               SizedBox(
-                height: 40,
+                height: 45,
                 child: CustomCardSetting(
                   list: settingAccountList,
-                  onTap: () {
+                  onTap: (index) {
+                    debugPrint("------is index $index");
                     context.go(Routes.PROFILE_SCREEN + Routes.ACCOUNT_INFO);
                   },
                 ),
@@ -60,79 +63,20 @@ class _SettingScreenState extends State<SettingScreen> {
                 style: TextStyle(fontWeight: FontWeight.w800, fontSize: 14),
               ),
               const SizedBox(height: 10),
+              //! Security
               SizedBox(
                 height: 115,
                 child: CustomCardSetting(
                   list: systemandsecurity,
-                  onTap: () {
-                    onShowBottomSheetsLanguage(
-                      context: context,
-                      colors: Colors.transparent,
-                      height: 220,
-                      appbar: true,
-                      child: Column(
-                        children: [
-                          const CustomHeaderIOS(),
-                          Container(
-                            height: 40,
-                            padding: const EdgeInsets.only(left: 20, top: 10),
-                            margin: const EdgeInsets.only(bottom: 10),
-                            width: double.infinity,
-                            child: Text(
-                              S.current.chooselanguage,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .titleLarge!
-                                  .copyWith(
-                                    fontSize: 20,
-                                    fontFamily: App.isEnglish
-                                        ? FontFamily.poppinsBold
-                                        : FontFamily.kantumruyPro,
-                                  ),
-                            ),
-                          ),
-                          const Divider(
-                            thickness: 1,
-                            height: 1,
-                            color: Color(0xffDDDDDD),
-                          ),
-                          CustomCardLanguage(
-                            language: S.current.khmer,
-                            select: Get.locale!.languageCode ==
-                                Languages.khmer.code,
-                            imageUrl: 'assets/svg/khmer_flag.svg',
-                            ontap: () {
-                              Get.put(App()).changeLanguage(Languages.khmer);
+                  onTap: (index) {
+                    debugPrint("------is index ${index.runtimeType}");
+                    if (index == 0) {
+                      debugPrint("-----is Index 0");
 
-                              Navigator.pop(context);
-                            },
-                          ),
-                          CustomCardLanguage(
-                            language: S.current.english,
-                            select: Get.locale!.languageCode ==
-                                Languages.english.code,
-                            imageUrl: 'assets/svg/en_flag.svg',
-                            ontap: () {
-                              Get.put(App()).changeLanguage(Languages.english);
-
-                              Navigator.pop(context);
-                            },
-                          ),
-                        ],
-                      ),
-                    );
-                  },
-                ),
-              ),
-              const SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    S.current.language,
-                  ),
-                  GestureDetector(
-                    onTap: () {
+                      context.go(Routes.PROFILE_SCREEN +
+                          Routes.SETTING_SCREEN +
+                          Routes.DARKMODE_SCREEN);
+                    } else if (index == 1) {
                       onShowBottomSheetsLanguage(
                         context: context,
                         colors: Colors.transparent,
@@ -190,41 +134,14 @@ class _SettingScreenState extends State<SettingScreen> {
                           ],
                         ),
                       );
-                    },
-                    child: Container(
-                      height: 31,
-                      width: 70,
-                      decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.4),
-                        borderRadius: BorderRadius.circular(50),
-                        border: Border.all(
-                          color: Colors.white.withOpacity(0.7),
-                          width: 1.5,
-                        ),
-                      ),
-                      child: Center(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            SvgPicture.asset(
-                              'assets/svg/language.svg',
-                              fit: BoxFit.cover,
-                              height: 24,
-                              width: 24,
-                            ),
-                            const Icon(
-                              Icons.keyboard_arrow_down,
-                              size: 26,
-                              color: Colors.black,
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+                    } else if (index == 2) {
+                      debugPrint("-----is Index 2");
+                    }
+                  },
+                ),
               ),
+              const SizedBox(height: 10),
+
               // ListTile(
               //   contentPadding: const EdgeInsets.only(left: 20.0, right: 20),
               //   title: const Text(

@@ -22,6 +22,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     final auth = Get.put(ThemeController());
     return Scaffold(
+      backgroundColor: context.isDarkMode
+          ? AppColor.primaryColorDark
+          : AppColor.bgScaffoldWhite,
       appBar: AppBar(
         centerTitle: true,
         leading: IconButton(
