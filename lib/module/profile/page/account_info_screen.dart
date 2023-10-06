@@ -3,6 +3,7 @@ import 'package:diya_ecomerce/generated/l10n.dart';
 import 'package:diya_ecomerce/module/profile/controller/profile_controller.dart';
 import 'package:diya_ecomerce/utils/widget/custom_setting_card.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class AccountInforScreen extends StatelessWidget {
   const AccountInforScreen({super.key});
@@ -10,21 +11,31 @@ class AccountInforScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade100,
+      backgroundColor:
+          context.isDarkMode ? AppColor.primaryColorDark : Colors.grey.shade100,
       appBar: AppBar(
-        backgroundColor: AppColor.textWhite,
+        backgroundColor: context.isDarkMode
+            ? AppColor.primaryColorDark
+            : Colors.grey.shade100,
         title: Text(S.current.account_information),
         centerTitle: true,
       ),
-      body: Column(
-        children: [
-          SizedBox(
-            height: 80,
-            child: CustomCardSetting(
-              list: [settingAccountList],
+      body: Padding(
+        padding: const EdgeInsets.only(left: 20.0, right: 20, top: 10),
+        child: Column(
+          children: [
+            const SizedBox(height: 10),
+            SizedBox(
+              height: 225,
+              child: CustomCardSetting(
+                list: accountinfo,
+                onTap: (index) {
+                  debugPrint("------is index $index");
+                },
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

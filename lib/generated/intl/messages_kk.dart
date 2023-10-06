@@ -27,9 +27,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "all": MessageLookupByLibrary.simpleMessage("ទាំងអស់"),
         "already_have_account":
             MessageLookupByLibrary.simpleMessage("មានគណនីរួចហើយ"),
+        "chage_info":
+            MessageLookupByLibrary.simpleMessage("ប្តូរព័ត៌មានផ្ទាល់ខ្លួន"),
+        "chane_pass": MessageLookupByLibrary.simpleMessage("ប្តូរពាក្យសម្ងាត់"),
+        "chane_phone": MessageLookupByLibrary.simpleMessage("លេខទូរសព្ទ"),
+        "change_name": MessageLookupByLibrary.simpleMessage("ប្តូរឈ្មោះគណនី"),
+        "change_username":
+            MessageLookupByLibrary.simpleMessage("ប្តូរឈ្មោះអ្នកប្រើប្រាស់"),
         "chooselanguage": MessageLookupByLibrary.simpleMessage("ជ្រើសរើសភាសា"),
         "create_account": MessageLookupByLibrary.simpleMessage("បង្កើតគណនី"),
         "dark_mode": MessageLookupByLibrary.simpleMessage("ផ្ទៃងងឹត"),
+        "delete_account": MessageLookupByLibrary.simpleMessage("លុបគណនី"),
         "edit": MessageLookupByLibrary.simpleMessage("កែប្រែ"),
         "edit_profile":
             MessageLookupByLibrary.simpleMessage("កែប្រែព័ត៌មានផ្ទាល់ខ្លួន"),

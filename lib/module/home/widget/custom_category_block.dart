@@ -61,9 +61,13 @@ class _CustomSelectCategoryState extends State<CustomSelectCategory> {
                         curve: Curves.linear,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
-                          color: homeController.index.value == e.key
-                              ? AppColor.primaryColor
-                              : AppColor.textWhite,
+                          color: context.isDarkMode
+                              ? homeController.index.value == e.key
+                                  ? AppColor.primaryColor
+                                  : AppColor.cardColorDark.withOpacity(0.5)
+                              : homeController.index.value == e.key
+                                  ? AppColor.primaryColor
+                                  : AppColor.textWhite,
                         ),
                         // alignment: Alignment.center,
                         child: Text(
@@ -71,9 +75,13 @@ class _CustomSelectCategoryState extends State<CustomSelectCategory> {
                           style:
                               Theme.of(context).textTheme.labelMedium?.copyWith(
                                     fontWeight: FontWeight.w400,
-                                    color: homeController.index.value == e.key
-                                        ? AppColor.textWhite
-                                        : AppColor.textBlackLight,
+                                    color: context.isDarkMode
+                                        ? homeController.index.value == e.key
+                                            ? AppColor.textWhite
+                                            : AppColor.textWhite
+                                        : homeController.index.value == e.key
+                                            ? AppColor.textWhite
+                                            : AppColor.textBlackLight,
                                   ),
                         ),
                       ),

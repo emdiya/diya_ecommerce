@@ -4,11 +4,8 @@ import 'package:diya_ecomerce/module/profile/controller/profile_controller.dart'
 import 'package:diya_ecomerce/utils/helper/extension/general_extension.dart';
 import 'package:diya_ecomerce/utils/widget/custom_setting_card.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
-import 'package:line_awesome_flutter/line_awesome_flutter.dart';
-
 import '../../../gen/fonts.gen.dart';
 import '../../../generated/l10n.dart';
 import '../../../utils/controller/gloabal_controller.dart';

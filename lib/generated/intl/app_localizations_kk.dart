@@ -153,4 +153,22 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get setting_security => 'ការកំណត់ និង សុវត្ថិភាព';
+
+  @override
+  String get chage_info => 'ប្តូរព័ត៌មានផ្ទាល់ខ្លួន';
+
+  @override
+  String get chane_pass => 'ប្តូរពាក្យសម្ងាត់';
+
+  @override
+  String get change_username => 'ប្តូរឈ្មោះអ្នកប្រើប្រាស់';
+
+  @override
+  String get change_name => 'ប្តូរឈ្មោះគណនី';
+
+  @override
+  String get chane_phone => 'លេខទូរសព្ទ';
+
+  @override
+  String get delete_account => 'លុបគណនី';
 }

@@ -1,3 +1,4 @@
+import 'package:diya_ecomerce/generated/l10n.dart';
 import 'package:diya_ecomerce/module/profile/model/darkmode/darkmode_model.dart';
 import 'package:diya_ecomerce/module/profile/model/setting/setting_account/setting_account_model.dart';
 import 'package:flutter/material.dart';
@@ -40,6 +41,32 @@ final settingAccountList = [
   SettingAccountModel(
     label: "ព័ត៌មានគណនី",
     iconData: LineAwesomeIcons.user_check,
+  ),
+];
+final accountinfo = [
+  SettingAccountModel(
+    label: S.current.chage_info,
+    iconData: LineAwesomeIcons.user_edit,
+  ),
+  SettingAccountModel(
+    label: S.current.chane_pass,
+    iconData: LineAwesomeIcons.key,
+  ),
+  SettingAccountModel(
+    label: S.current.change_username,
+    iconData: LineAwesomeIcons.user_injured,
+  ),
+  SettingAccountModel(
+    label: S.current.change_name,
+    iconData: LineAwesomeIcons.user_slash,
+  ),
+  SettingAccountModel(
+    label: S.current.chane_phone,
+    iconData: LineAwesomeIcons.phone,
+  ),
+  SettingAccountModel(
+    label: S.current.delete_account,
+    iconData: LineAwesomeIcons.remove_user,
   ),
 ];
 

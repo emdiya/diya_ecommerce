@@ -153,4 +153,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get setting_security => 'Setting & Security';
+
+  @override
+  String get chage_info => 'Change Personal Information';
+
+  @override
+  String get chane_pass => 'Change Password';
+
+  @override
+  String get change_username => 'Change Username';
+
+  @override
+  String get change_name => 'Change Name';
+
+  @override
+  String get chane_phone => 'Add Phone Number';
+
+  @override
+  String get delete_account => 'Delete Account';
 }

@@ -27,11 +27,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "all": MessageLookupByLibrary.simpleMessage("All Shoes"),
         "already_have_account":
             MessageLookupByLibrary.simpleMessage("Already Have Account"),
+        "chage_info":
+            MessageLookupByLibrary.simpleMessage("Change Personal Information"),
+        "chane_pass": MessageLookupByLibrary.simpleMessage("Change Password"),
+        "chane_phone": MessageLookupByLibrary.simpleMessage("Add Phone Number"),
+        "change_name": MessageLookupByLibrary.simpleMessage("Change Name"),
+        "change_username":
+            MessageLookupByLibrary.simpleMessage("Change Username"),
         "chooselanguage":
             MessageLookupByLibrary.simpleMessage("Choose Language"),
         "create_account":
             MessageLookupByLibrary.simpleMessage("Create Account"),
         "dark_mode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+        "delete_account":
+            MessageLookupByLibrary.simpleMessage("Delete Account"),
         "edit": MessageLookupByLibrary.simpleMessage("Edit"),
         "edit_profile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),

@@ -49,6 +49,12 @@
     "log_out":"Log Out",
     "privacy":"Privacy",
     "edit_profile":"Edit Profile",
-    "setting_security":"Setting & Security"
+    "setting_security":"Setting & Security",
+    "chage_info":"Change Personal Information",
+    "chane_pass":"Change Password",
+    "change_username":"Change Username",
+    "change_name":"Change Name",
+    "chane_phone":"Add Phone Number",
+    "delete_account":"Delete Account"
   
 }

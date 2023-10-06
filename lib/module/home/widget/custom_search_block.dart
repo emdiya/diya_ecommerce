@@ -20,7 +20,9 @@ class CustomSearchBlock extends StatelessWidget {
             height: 52,
             width: Get.width,
             decoration: BoxDecoration(
-                color: AppColor.textWhite,
+                color: context.isDarkMode
+                    ? AppColor.cardColorDark.withOpacity(0.5)
+                    : AppColor.textWhite,
                 borderRadius: BorderRadius.circular(14),
                 boxShadow: [
                   BoxShadow(
@@ -51,19 +53,21 @@ class CustomSearchBlock extends StatelessWidget {
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(14),
                   borderSide: BorderSide(
+                    width: 0.5,
                     color: AppColor.textWhite,
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(14),
                   borderSide: BorderSide(
-                    width: 0.8,
+                    width: 0.5,
                     color: AppColor.primaryColor,
                   ),
                 ),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(14),
                   borderSide: BorderSide(
+                    width: 0.5,
                     color: AppColor.textWhite,
                   ),
                 ),

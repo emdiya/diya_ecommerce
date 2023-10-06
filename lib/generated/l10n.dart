@@ -549,6 +549,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Change Personal Information`
+  String get chage_info {
+    return Intl.message(
+      'Change Personal Information',
+      name: 'chage_info',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Password`
+  String get chane_pass {
+    return Intl.message(
+      'Change Password',
+      name: 'chane_pass',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Username`
+  String get change_username {
+    return Intl.message(
+      'Change Username',
+      name: 'change_username',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Name`
+  String get change_name {
+    return Intl.message(
+      'Change Name',
+      name: 'change_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Phone Number`
+  String get chane_phone {
+    return Intl.message(
+      'Add Phone Number',
+      name: 'chane_phone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete Account`
+  String get delete_account {
+    return Intl.message(
+      'Delete Account',
+      name: 'delete_account',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -17,7 +17,8 @@ class FavoriteScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final favoriteController = Get.put(FavoriteController());
     return Scaffold(
-      backgroundColor: AppColor.textGrey6,
+      backgroundColor:
+          context.isDarkMode ? AppColor.primaryColorDark : Colors.grey.shade100,
       appBar: customAppbar(
         onTapLeading: () {
           context.go(Routes.HOME_SCREEN);
@@ -25,7 +26,9 @@ class FavoriteScreen extends StatelessWidget {
         context: context,
         title: S.current.favorite,
         centerTitle: true,
-        bacbackgroundColor: AppColor.textWhite,
+        bacbackgroundColor: context.isDarkMode
+            ? AppColor.primaryColorDark
+            : Colors.grey.shade100,
       ),
       body: GetBuilder<FavoriteController>(
         init: Get.find<FavoriteController>(),

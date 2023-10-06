@@ -392,6 +392,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Setting & Security'**
   String get setting_security;
+
+  /// No description provided for @chage_info.
+  ///
+  /// In en, this message translates to:
+  /// **'Change Personal Information'**
+  String get chage_info;
+
+  /// No description provided for @chane_pass.
+  ///
+  /// In en, this message translates to:
+  /// **'Change Password'**
+  String get chane_pass;
+
+  /// No description provided for @change_username.
+  ///
+  /// In en, this message translates to:
+  /// **'Change Username'**
+  String get change_username;
+
+  /// No description provided for @change_name.
+  ///
+  /// In en, this message translates to:
+  /// **'Change Name'**
+  String get change_name;
+
+  /// No description provided for @chane_phone.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Phone Number'**
+  String get chane_phone;
+
+  /// No description provided for @delete_account.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Account'**
+  String get delete_account;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

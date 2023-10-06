@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'package:diya_ecomerce/module/home/model/product_model/product_model.dart';
+import 'package:get/get.dart';
 
 import '../../../constant/app_colors.dart';
 import '../../../gen/fonts.gen.dart';
@@ -23,8 +24,9 @@ class CustomFavoriteCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        // color: Colors.red,
-        color: AppColor.textWhite,
+        color: context.isDarkMode
+            ? AppColor.cardColorDark.withOpacity(0.5)
+            : AppColor.textWhite,
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
@@ -55,7 +57,9 @@ class CustomFavoriteCard extends StatelessWidget {
                       height: 35,
                       width: 35,
                       decoration: BoxDecoration(
-                        color: AppColor.textGrey6,
+                        color: context.isDarkMode
+                            ? AppColor.cardColorDark.withOpacity(0.5)
+                            : AppColor.textGrey6,
                         shape: BoxShape.circle,
                       ),
                       child: Padding(
@@ -100,7 +104,9 @@ class CustomFavoriteCard extends StatelessWidget {
                       allProductModel?.lable ?? '',
                       style: Theme.of(context).textTheme.labelLarge?.copyWith(
                             fontSize: 16,
-                            color: AppColor.textGrey2,
+                            color: context.isDarkMode
+                                ? AppColor.textWhite
+                                : AppColor.textGrey2,
                             fontFamily: FontFamily.ralewaySemiBold,
                           ),
                     ),
@@ -115,7 +121,9 @@ class CustomFavoriteCard extends StatelessWidget {
                                 .textTheme
                                 .labelLarge
                                 ?.copyWith(
-                                  color: AppColor.textBlackLight,
+                                  color: context.isDarkMode
+                                      ? AppColor.textWhite
+                                      : AppColor.textBlackLight,
                                   fontWeight: FontWeight.w600,
                                 ),
                           ),

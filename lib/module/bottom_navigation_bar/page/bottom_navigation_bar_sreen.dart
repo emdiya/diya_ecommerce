@@ -52,7 +52,9 @@ class BottomNavBarScreen extends StatelessWidget {
           notchMargin: 10,
           padding: const EdgeInsets.all(0),
           shadowColor: AppColor.primaryColor,
-          color: Colors.white,
+          color: context.isDarkMode
+              ? AppColor.primaryColorDark
+              : AppColor.textWhite,
           surfaceTintColor: Colors.transparent,
           elevation: 10,
           height: 80,

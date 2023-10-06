@@ -42,7 +42,7 @@ class CustomCardSwitchCategoory extends StatelessWidget {
                   Text(
                     S.current.popular,
                     style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                          fontFamily: Get.put(App().localLang.value == "en")
+                          fontFamily: App.isEnglish
                               ? FontFamily.ralewayRegular
                               : FontFamily.kantumruyPro,
                           fontSize: 16,

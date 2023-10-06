@@ -36,7 +36,9 @@ class CustomListCardProduct extends StatelessWidget {
                   aspectRatio: 157 / 201,
                   child: Container(
                     decoration: BoxDecoration(
-                      color: AppColor.textWhite,
+                      color: context.isDarkMode
+                          ? AppColor.cardColorDark.withOpacity(0.5)
+                          : AppColor.textWhite,
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: Column(
@@ -64,13 +66,27 @@ class CustomListCardProduct extends StatelessWidget {
                                     const EdgeInsets.only(left: 12, top: 12),
                                 child: GestureDetector(
                                   onTap: onTap,
-                                  child: SvgPicture.asset(
-                                    isFav
-                                        ? Assets.svg.home.isLove.path
-                                        : Assets.svg.home.unLove.path,
-                                    height: 18,
-                                    width: 18,
-                                  ),
+                                  child: context.isDarkMode
+                                      ? SvgPicture.asset(
+                                          isFav
+                                              ? Assets.svg.home.isLove.path
+                                              : Assets.svg.home.unLove.path,
+                                          height: 18,
+                                          width: 18,
+                                          colorFilter: ColorFilter.mode(
+                                              isFav ? Colors.red : Colors.white,
+                                              BlendMode.srcIn),
+                                        )
+                                      : SvgPicture.asset(
+                                          isFav
+                                              ? Assets.svg.home.isLove.path
+                                              : Assets.svg.home.unLove.path,
+                                          height: 18,
+                                          width: 18,
+                                          colorFilter: ColorFilter.mode(
+                                              isFav ? Colors.red : Colors.grey,
+                                              BlendMode.srcIn),
+                                        ),
                                 ),
                               ),
                             ),
@@ -108,7 +124,9 @@ class CustomListCardProduct extends StatelessWidget {
                                         .labelLarge
                                         ?.copyWith(
                                           fontSize: 16,
-                                          color: AppColor.textGrey2,
+                                          color: context.isDarkMode
+                                              ? AppColor.textWhite
+                                              : AppColor.textGrey2,
                                           fontFamily:
                                               FontFamily.ralewaySemiBold,
                                         ),
@@ -125,7 +143,9 @@ class CustomListCardProduct extends StatelessWidget {
                                               .textTheme
                                               .labelLarge
                                               ?.copyWith(
-                                                color: AppColor.textBlackLight,
+                                                color: context.isDarkMode
+                                                    ? AppColor.textWhite
+                                                    : AppColor.textBlackLight,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                         ),

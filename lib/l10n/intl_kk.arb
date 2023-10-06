@@ -49,6 +49,12 @@
     "log_out":"ចាកចេញ",
     "privacy":"ឯកជនភាព",
     "edit_profile":"កែប្រែព័ត៌មានផ្ទាល់ខ្លួន",
-    "setting_security":"ការកំណត់ និង សុវត្ថិភាព"
+    "setting_security":"ការកំណត់ និង សុវត្ថិភាព",
+    "chage_info":"ប្តូរព័ត៌មានផ្ទាល់ខ្លួន",
+    "chane_pass":"ប្តូរពាក្យសម្ងាត់",
+    "change_username":"ប្តូរឈ្មោះអ្នកប្រើប្រាស់",
+    "change_name":"ប្តូរឈ្មោះគណនី",
+    "chane_phone":"លេខទូរសព្ទ",
+    "delete_account":"លុបគណនី"
   
 }

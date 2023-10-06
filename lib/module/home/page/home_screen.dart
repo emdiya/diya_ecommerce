@@ -1,10 +1,12 @@
+import 'package:diya_ecomerce/constant/app_colors.dart';
 import 'package:diya_ecomerce/gen/fonts.gen.dart';
 import 'package:diya_ecomerce/module/home/widget/custom_category_block.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 import '../../../utils/widget/custom_button_bagcart.dart';
-import '../widget/custom_item_menu.dart';
+
 import '../widget/custom_newarrival_block.dart';
 import '../widget/custom_search_block.dart';
 
@@ -14,10 +16,13 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffF7F7F9),
+      backgroundColor:
+          context.isDarkMode ? AppColor.primaryColorDark : Colors.grey.shade100,
       extendBody: true,
       appBar: AppBar(
-        backgroundColor: const Color(0xffF7F7F9),
+        backgroundColor: context.isDarkMode
+            ? AppColor.primaryColorDark
+            : Colors.grey.shade100,
         elevation: 0,
         centerTitle: true,
         title: Text(
