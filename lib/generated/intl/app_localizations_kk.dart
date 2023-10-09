@@ -171,4 +171,25 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get delete_account => 'លុបគណនី';
+
+  @override
+  String get account_setting => 'កំណត់គណនី';
+
+  @override
+  String get sys_security => 'ប្រព័ន្ធ និងសុវត្ថិភាព';
+
+  @override
+  String get darkmode => 'ផ្ទៃងងឹត';
+
+  @override
+  String get exit => 'ចាកចេញ';
+
+  @override
+  String get sys => 'ប្រព័ន្ធ';
+
+  @override
+  String get light => 'ពន្លឺ';
+
+  @override
+  String get dark => 'ងងឹត';
 }

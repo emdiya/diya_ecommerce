@@ -39,7 +39,7 @@ enum VisualMode {
 
 final settingAccountList = [
   SettingAccountModel(
-    label: "ព័ត៌មានគណនី",
+    label: S.current.account_information,
     iconData: LineAwesomeIcons.user_check,
   ),
 ];
@@ -85,8 +85,23 @@ final systemandsecurity = [
   ),
 ];
 
+final systemandsecurityEn = [
+  SettingAccountModel(
+    label: "Dark Mode",
+    iconData: LineAwesomeIcons.moon,
+  ),
+  SettingAccountModel(
+    label: "Language",
+    iconData: LineAwesomeIcons.language,
+  ),
+  SettingAccountModel(
+    label: "Exit",
+    iconData: Icons.exit_to_app,
+  ),
+];
+
 final darkModeList = [
-  DarkModeModel(label: "Systen", isClick: false),
+  DarkModeModel(label: "System", isClick: false),
   DarkModeModel(label: "Light", isClick: false),
   DarkModeModel(label: "Dark", isClick: false),
 ];

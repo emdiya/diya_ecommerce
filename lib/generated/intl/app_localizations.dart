@@ -428,6 +428,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Delete Account'**
   String get delete_account;
+
+  /// No description provided for @account_setting.
+  ///
+  /// In en, this message translates to:
+  /// **'Account Setting'**
+  String get account_setting;
+
+  /// No description provided for @sys_security.
+  ///
+  /// In en, this message translates to:
+  /// **'System and Security'**
+  String get sys_security;
+
+  /// No description provided for @darkmode.
+  ///
+  /// In en, this message translates to:
+  /// **'Dark Mode'**
+  String get darkmode;
+
+  /// No description provided for @exit.
+  ///
+  /// In en, this message translates to:
+  /// **'Exit'**
+  String get exit;
+
+  /// No description provided for @sys.
+  ///
+  /// In en, this message translates to:
+  /// **'System'**
+  String get sys;
+
+  /// No description provided for @light.
+  ///
+  /// In en, this message translates to:
+  /// **'Light'**
+  String get light;
+
+  /// No description provided for @dark.
+  ///
+  /// In en, this message translates to:
+  /// **'Dark'**
+  String get dark;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

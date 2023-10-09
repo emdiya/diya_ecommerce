@@ -26,7 +26,7 @@ class AccountInforScreen extends StatelessWidget {
           children: [
             const SizedBox(height: 10),
             SizedBox(
-              height: 225,
+              height: 290,
               child: CustomCardSetting(
                 list: accountinfo,
                 onTap: (index) {

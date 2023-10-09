@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "account_information":
             MessageLookupByLibrary.simpleMessage("ព័ត៌មានគណនី"),
+        "account_setting": MessageLookupByLibrary.simpleMessage("កំណត់គណនី"),
         "all": MessageLookupByLibrary.simpleMessage("ទាំងអស់"),
         "already_have_account":
             MessageLookupByLibrary.simpleMessage("មានគណនីរួចហើយ"),
@@ -36,7 +37,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ប្តូរឈ្មោះអ្នកប្រើប្រាស់"),
         "chooselanguage": MessageLookupByLibrary.simpleMessage("ជ្រើសរើសភាសា"),
         "create_account": MessageLookupByLibrary.simpleMessage("បង្កើតគណនី"),
+        "dark": MessageLookupByLibrary.simpleMessage("ងងឹត"),
         "dark_mode": MessageLookupByLibrary.simpleMessage("ផ្ទៃងងឹត"),
+        "darkmode": MessageLookupByLibrary.simpleMessage("ផ្ទៃងងឹត"),
         "delete_account": MessageLookupByLibrary.simpleMessage("លុបគណនី"),
         "edit": MessageLookupByLibrary.simpleMessage("កែប្រែ"),
         "edit_profile":
@@ -45,6 +48,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "email_address":
             MessageLookupByLibrary.simpleMessage("អាសយដ្ឋាន អ៊ីម៉ែល"),
         "english": MessageLookupByLibrary.simpleMessage("ភាសាអង់គ្លេស"),
+        "exit": MessageLookupByLibrary.simpleMessage("ចាកចេញ"),
         "favorite": MessageLookupByLibrary.simpleMessage("ចូលចិត្ត"),
         "fill_your_detail": MessageLookupByLibrary.simpleMessage(
             "បំពេញព័ត៌មានលម្អិតរបស់អ្នក ឬភ្ចាប់ជាមួយប្រព័ន្ធផ្សព្វផ្សាយសង្គម"),
@@ -55,6 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "khmer": MessageLookupByLibrary.simpleMessage("ភាសាខ្មែរ"),
         "kid": MessageLookupByLibrary.simpleMessage("ក្មេង"),
         "language": MessageLookupByLibrary.simpleMessage("ភាសា"),
+        "light": MessageLookupByLibrary.simpleMessage("ពន្លឺ"),
         "log_in": MessageLookupByLibrary.simpleMessage("ចូលគណនី"),
         "log_out": MessageLookupByLibrary.simpleMessage("ចាកចេញ"),
         "lookingForShoe": MessageLookupByLibrary.simpleMessage("ស្វែងរក"),
@@ -90,6 +95,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "sign_in_google":
             MessageLookupByLibrary.simpleMessage("ចុះឈ្មោះជាមួយ google"),
         "skip": MessageLookupByLibrary.simpleMessage("រំលង"),
+        "sys": MessageLookupByLibrary.simpleMessage("ប្រព័ន្ធ"),
+        "sys_security":
+            MessageLookupByLibrary.simpleMessage("ប្រព័ន្ធ និងសុវត្ថិភាព"),
         "welcometodmstore":
             MessageLookupByLibrary.simpleMessage("ស្វាគមន៍មកកាន់ ឌី អឹម ស្តរ"),
         "women": MessageLookupByLibrary.simpleMessage("ស្រ្តី"),

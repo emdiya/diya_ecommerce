@@ -2,6 +2,7 @@ import 'package:diya_ecomerce/constant/app_colors.dart';
 import 'package:diya_ecomerce/gen/fonts.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 PreferredSizeWidget customAppbar({
   required BuildContext context,
@@ -32,11 +33,18 @@ PreferredSizeWidget customAppbar({
           width: 44,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: AppColor.textWhite,
+            color: context.isDarkMode
+                ? AppColor.cardColorDark.withOpacity(0.2)
+                : AppColor.textWhite,
           ),
           child: Padding(
             padding: const EdgeInsets.all(18.5),
             child: SvgPicture.asset(
+              colorFilter: ColorFilter.mode(
+                  context.isDarkMode
+                      ? AppColor.textWhite
+                      : AppColor.textBlackLight,
+                  BlendMode.srcIn),
               'assets/svg/arrow_back.svg',
               height: 5.5,
               width: 11.5,
@@ -61,13 +69,20 @@ PreferredSizeWidget customAppbar({
             width: 44,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: AppColor.textWhite,
+              color: context.isDarkMode
+                  ? AppColor.cardColorDark.withOpacity(0.2)
+                  : AppColor.textWhite,
             ),
             child: Padding(
               padding: const EdgeInsets.all(12.0),
               child: GestureDetector(
                 onTap: onTapAction,
                 child: SvgPicture.asset(
+                  colorFilter: ColorFilter.mode(
+                      context.isDarkMode
+                          ? AppColor.textWhite
+                          : AppColor.textBlackLight,
+                      BlendMode.srcIn),
                   iconAction ?? 'assets/svg/fav.svg',
                   height: 18,
                   width: 16,

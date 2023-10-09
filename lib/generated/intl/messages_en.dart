@@ -24,6 +24,8 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "account_information":
             MessageLookupByLibrary.simpleMessage("Account Information"),
+        "account_setting":
+            MessageLookupByLibrary.simpleMessage("Account Setting"),
         "all": MessageLookupByLibrary.simpleMessage("All Shoes"),
         "already_have_account":
             MessageLookupByLibrary.simpleMessage("Already Have Account"),
@@ -38,7 +40,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Choose Language"),
         "create_account":
             MessageLookupByLibrary.simpleMessage("Create Account"),
+        "dark": MessageLookupByLibrary.simpleMessage("Dark"),
         "dark_mode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+        "darkmode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "delete_account":
             MessageLookupByLibrary.simpleMessage("Delete Account"),
         "edit": MessageLookupByLibrary.simpleMessage("Edit"),
@@ -46,6 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "email_address": MessageLookupByLibrary.simpleMessage("Email Address"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
+        "exit": MessageLookupByLibrary.simpleMessage("Exit"),
         "favorite": MessageLookupByLibrary.simpleMessage("Favorite"),
         "fill_your_detail": MessageLookupByLibrary.simpleMessage(
             "Fill your details or continue with social media"),
@@ -57,6 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "khmer": MessageLookupByLibrary.simpleMessage("Khmer"),
         "kid": MessageLookupByLibrary.simpleMessage("Kid"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
+        "light": MessageLookupByLibrary.simpleMessage("Light"),
         "log_in": MessageLookupByLibrary.simpleMessage("Log In"),
         "log_out": MessageLookupByLibrary.simpleMessage("Log Out"),
         "lookingForShoe":
@@ -94,6 +100,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "sign_in_google":
             MessageLookupByLibrary.simpleMessage("Sign In With Google"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+        "sys": MessageLookupByLibrary.simpleMessage("System"),
+        "sys_security":
+            MessageLookupByLibrary.simpleMessage("System and Security"),
         "welcometodmstore":
             MessageLookupByLibrary.simpleMessage("WELCOME TO DM STORE"),
         "women": MessageLookupByLibrary.simpleMessage("Women"),

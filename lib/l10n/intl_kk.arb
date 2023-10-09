@@ -55,6 +55,14 @@
     "change_username":"ប្តូរឈ្មោះអ្នកប្រើប្រាស់",
     "change_name":"ប្តូរឈ្មោះគណនី",
     "chane_phone":"លេខទូរសព្ទ",
-    "delete_account":"លុបគណនី"
+    "delete_account":"លុបគណនី",
+    "account_setting":"កំណត់គណនី",
+    "sys_security":"ប្រព័ន្ធ និងសុវត្ថិភាព",
+    "darkmode":"ផ្ទៃងងឹត",
+    "exit":"ចាកចេញ",
+    "sys":"ប្រព័ន្ធ",
+    "light":"ពន្លឺ",
+    "dark":"ងងឹត"
+    
   
 }

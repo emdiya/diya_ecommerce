@@ -171,4 +171,25 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get delete_account => 'Delete Account';
+
+  @override
+  String get account_setting => 'Account Setting';
+
+  @override
+  String get sys_security => 'System and Security';
+
+  @override
+  String get darkmode => 'Dark Mode';
+
+  @override
+  String get exit => 'Exit';
+
+  @override
+  String get sys => 'System';
+
+  @override
+  String get light => 'Light';
+
+  @override
+  String get dark => 'Dark';
 }

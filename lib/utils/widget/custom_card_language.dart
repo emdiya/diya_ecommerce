@@ -1,5 +1,7 @@
+import 'package:diya_ecomerce/constant/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 import '../../gen/fonts.gen.dart';
 import '../controller/gloabal_controller.dart';
@@ -31,7 +33,13 @@ class CustomCardLanguage extends StatelessWidget {
         GestureDetector(
           onTap: ontap,
           child: Container(
-            color: select! ? const Color(0xffF9F9F9) : Colors.transparent,
+            color: context.isDarkMode
+                ? select!
+                    ? AppColor.cardColorDark
+                    : Colors.transparent
+                : select!
+                    ? const Color(0xffF9F9F9)
+                    : Colors.transparent,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Row(

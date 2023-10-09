@@ -55,6 +55,15 @@
     "change_username":"Change Username",
     "change_name":"Change Name",
     "chane_phone":"Add Phone Number",
-    "delete_account":"Delete Account"
+    "delete_account":"Delete Account",
+    "account_setting":"Account Setting",
+    "sys_security":"System and Security",
+    "darkmode":"Dark Mode",
+    "exit":"Exit",
+    "sys":"System",
+    "light":"Light",
+    "dark":"Dark"
+    
+    
   
 }

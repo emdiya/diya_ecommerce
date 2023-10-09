@@ -609,6 +609,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Account Setting`
+  String get account_setting {
+    return Intl.message(
+      'Account Setting',
+      name: 'account_setting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `System and Security`
+  String get sys_security {
+    return Intl.message(
+      'System and Security',
+      name: 'sys_security',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dark Mode`
+  String get darkmode {
+    return Intl.message(
+      'Dark Mode',
+      name: 'darkmode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exit`
+  String get exit {
+    return Intl.message(
+      'Exit',
+      name: 'exit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `System`
+  String get sys {
+    return Intl.message(
+      'System',
+      name: 'sys',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Light`
+  String get light {
+    return Intl.message(
+      'Light',
+      name: 'light',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dark`
+  String get dark {
+    return Intl.message(
+      'Dark',
+      name: 'dark',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
